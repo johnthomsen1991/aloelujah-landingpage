@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aloelujah – Du bist offline</title>
+  <style>
+    :root { --gold: #D4AF87; --champagne: #F5E6D3; --emerald: #0A3D3A; --charcoal: #2F2E2D; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: var(--champagne); color: var(--charcoal); font-family: 'Georgia', serif; min-height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; padding: 24px; }
+    .letter { max-width: 500px; background: white; padding: 40px 30px; border-radius: 30px; box-shadow: 0 20px 40px rgba(0,0,0,0.08); border: 2px solid var(--gold); }
+    h1 { font-size: 2.5rem; color: var(--gold); margin-bottom: 16px; font-family: 'Playfair Display', serif; }
+    .divider { width: 60px; height: 1px; background: var(--gold); margin: 20px auto; }
+    p { font-size: 1.1rem; line-height: 1.6; color: var(--charcoal); opacity: 0.8; margin-bottom: 24px; }
+    .btn { display: inline-block; background: var(--emerald); color: white; padding: 14px 32px; border-radius: 40px; text-decoration: none; font-weight: 500; transition: all 0.3s; border: none; cursor: pointer; }
+    .btn:hover { background: var(--gold); color: var(--charcoal); }
+    .small { font-size: 0.8rem; opacity: 0.5; margin-top: 30px; }
+    .icon { font-size: 4rem; margin-bottom: 10px; }
+  </style>
+</head>
+<body>
+  <div class="letter">
+    <div class="icon">📻</div>
+    <h1>Aloelujah</h1>
+    <div class="divider"></div>
+    <p style="font-style: italic;">"Manche Verbindungen brauchen einen Moment der Stille..."</p>
+    <p>Du bist gerade offline. Aber deine Rituale warten geduldig auf dich – wie ein guter alter Brief.</p>
+    <button class="btn" onclick="location.reload()">🔄 Erneut verbinden</button>
+    <p class="small">Sobald du wieder online bist, geht's weiter.<br>Dein Secret Garden ist nur einen WLAN-Moment entfernt.</p>
+  </div>
+</body>
+</html>
