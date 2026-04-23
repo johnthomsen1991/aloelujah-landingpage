@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aloelujah-v4';
+const CACHE_NAME = 'aloelujah-v5';
 const OFFLINE_URL = '/offline.html';
 const CACHE_URLS = [
   '/',
@@ -7,8 +7,8 @@ const CACHE_URLS = [
   '/manifest.json',
   '/icon-192.png',
   '/icon-512.png',
-  'https://cdn.tailwindcss.com',
-  'https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap'
+  'https://cdn.tailwindcss.com/3.4.1',
+  'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Lora:ital,wght@0,400;0,500;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap'
 ];
 
 self.addEventListener('install', event => {
@@ -61,7 +61,7 @@ self.addEventListener('push', event => {
   if (!(self.Notification && self.Notification.permission === 'granted')) return;
   const data = event.data?.json() || {};
   event.waitUntil(
-    self.registration.showNotification(data.title || '🌸 Aloelujah Moment', {
+    self.registration.showNotification(data.title || 'Dein Aloelujah Moment', {
       body: data.body || 'Dein tägliches Ritual wartet auf dich ✨',
       icon: '/icon-192.png',
       badge: '/icon-192.png',

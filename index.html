@@ -2,6 +2,7 @@
 <html lang="de">
 <head>
   <meta charset="utf-8" />
+
   <!-- A11y: maximum-scale entfernt, user-scalable=yes -->
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -27,7 +28,9 @@
 
   <!-- Theme Color & PWA -->
   <meta name="theme-color" content="#D4AF87" />
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <link rel="apple-touch-icon" href="/icon-192.png">
 
   <!-- Favicon (Platzhalter) -->
@@ -61,8 +64,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:wght@400;500;600&family=Great+Vibes&family=Cormorant+Garamond:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet" />
 
   <!-- Libraries (GSAP, Lenis – bewährte Versionen) -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -416,92 +419,219 @@
     </p>
   </div>
 
-  <!-- ===== NAVBAR (mit Logo & Slogan) ===== -->
-  <nav class="fixed top-0 w-full z-50 bg-champagne/95 backdrop-blur-md border-b border-gold/30">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-3 md:py-5">
-      <div class="flex items-center justify-between">
-        <div class="flex items-center gap-3">
-          <div class="relative w-10 h-10 md:w-12 md:h-12 flex items-center justify-center">
-            <span class="text-4xl md:text-5xl font-serif text-gold font-bold" style="font-family: 'Playfair Display', serif; transform: scaleX(0.9);">A</span>
-            <span class="absolute -top-1 -right-1 text-xs md:text-sm text-gold">🌙</span>
-            <span class="absolute -bottom-1 -left-1 text-[10px] md:text-xs text-gold">❤️</span>
-          </div>
-          <div class="flex flex-col">
-            <h1 class="text-2xl sm:text-3xl md:text-4xl font-canela text-gold leading-tight">Aloelujah</h1>
-            <p class="text-[8px] sm:text-[10px] md:text-xs uppercase tracking-[0.3em] text-charcoal/60 -mt-1">WIR, MIT DIR... leben VITALITÄT!</p>
-          </div>
+  <!-- ===== NAVBAR (Aloelujah – neuer Hero) ===== -->
+  <nav class="fixed top-0 w-full z-50 transition-all duration-400" id="mainNav" style="background:transparent;">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
+
+      <!-- Logo -->
+      <a href="/" class="flex items-center gap-3" aria-label="Aloelujah – Startseite">
+        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M22 38 C22 38 8 28 10 16 C12 8 18 6 22 10" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M22 38 C22 38 36 28 34 16 C32 8 26 6 22 10" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+          <path d="M17 11 C17 8 19.5 6 22 8 C24.5 6 27 8 27 11 C27 14 22 17 22 17 C22 17 17 14 17 11Z" fill="#D4AF87" opacity="0.85"/>
+          <path d="M7 20 C7 16 9 13 12 13 C10 15 10 18 12 20 C10 22 9 24 10 26 C8 25 7 23 7 20Z" fill="#D4AF87" opacity="0.5"/>
+          <circle cx="36" cy="14" r="1.5" fill="#D4AF87" opacity="0.6"/>
+          <circle cx="38" cy="20" r="1" fill="#D4AF87" opacity="0.4"/>
+          <circle cx="36" cy="26" r="1.5" fill="#D4AF87" opacity="0.6"/>
+          <line x1="22" y1="17" x2="22" y2="38" stroke="#D4AF87" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
+        </svg>
+        <div class="flex flex-col leading-none">
+          <span style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#D4AF87;letter-spacing:1px;">Aloelujah</span>
+          <span style="font-family:'Great Vibes',cursive;font-size:13px;color:rgba(253,251,247,0.7);margin-top:1px;">by Danavara</span>
         </div>
-        <button id="mobile-menu-btn" class="md:hidden text-3xl text-gold p-2">☰</button>
-        <div class="hidden md:flex items-center space-x-6 lg:space-x-8 text-sm lg:text-base">
-          <a href="#story" class="hover:text-gold transition">Story</a>
-          <a href="#rituals" class="hover:text-gold transition">Rituale</a>
-          <a href="#collection" class="hover:text-gold transition">Collection</a>
-          <a href="#mudita" class="hover:text-gold transition">Mudita Circle</a>
-          <a href="#partner" class="hover:text-gold transition">Partner werden</a>
-          <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener" class="bg-gold text-champagne px-5 py-2 rounded-full hover:bg-emerald transition">Zum Shop</a>
-        </div>
+      </a>
+
+      <!-- Desktop Nav Links -->
+      <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm" style="font-family:'Lora',serif;color:rgba(253,251,247,0.75);">
+        <a href="#story" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Story</a>
+        <a href="#rituals" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Rituale</a>
+        <a href="#mudita" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Mudita Circle</a>
+        <a href="#partner" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Partner werden</a>
+        <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener"
+           style="font-family:'Lora',serif;font-size:13px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:#1A3B32;background:#D4AF87;padding:11px 28px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background 0.25s,transform 0.2s;display:inline-block;text-decoration:none;"
+           onmouseover="this.style.background='#FDFBF7';this.style.transform='translateY(-1px)'"
+           onmouseout="this.style.background='#D4AF87';this.style.transform='translateY(0)'">
+          Ritual entdecken
+        </a>
       </div>
+
+      <!-- Mobile Burger -->
+      <button id="mobile-menu-btn" class="md:hidden text-3xl p-2" style="color:#D4AF87;" aria-label="Menü öffnen">☰</button>
     </div>
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full bg-champagne/98 backdrop-blur-lg border-b border-gold/30 py-6 px-6 shadow-xl">
-      <div class="flex flex-col space-y-5 text-xl text-center">
+
+    <!-- Mobile Menu -->
+    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full py-6 px-6 shadow-xl" style="background:rgba(26,59,50,0.98);border-top:1px solid rgba(212,175,135,0.2);">
+      <div class="flex flex-col space-y-5 text-xl text-center" style="font-family:'Lora',serif;color:rgba(253,251,247,0.8);">
         <a href="#story" class="hover:text-gold transition py-2">Story</a>
         <a href="#rituals" class="hover:text-gold transition py-2">Rituale</a>
-        <a href="#collection" class="hover:text-gold transition py-2">Collection</a>
         <a href="#mudita" class="hover:text-gold transition py-2">Mudita Circle</a>
         <a href="#partner" class="hover:text-gold transition py-2">Partner werden</a>
-        <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener" class="bg-gold text-champagne px-8 py-3 rounded-full hover:bg-emerald transition mt-4 inline-block mx-auto">Zum Shop</a>
-        <button id="enable-notifications-mobile" class="hidden mt-4 mx-auto border border-gold/60 text-charcoal px-6 py-2 rounded-full text-sm">🔔 Ritual-Erinnerungen</button>
+        <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener"
+           class="mt-4 inline-block mx-auto px-10 py-3 text-base"
+           style="background:#D4AF87;color:#1A3B32;font-weight:500;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);">
+          Zum Shop
+        </a>
+        <button id="enable-notifications-mobile" class="hidden mt-4 mx-auto text-sm" style="border:1px solid rgba(212,175,135,0.5);color:rgba(253,251,247,0.7);padding:8px 24px;border-radius:40px;">🔔 Ritual-Erinnerungen</button>
       </div>
     </div>
   </nav>
 
   <!-- ===== HERO SECTION ===== -->
-  <header class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16 md:pt-20">
-    <div class="absolute inset-0 -z-20 overflow-hidden bg-black pointer-events-none">
-      <iframe class="absolute top-1/2 left-1/2 min-w-[100vw] min-h-[100vh] w-auto h-auto -translate-x-1/2 -translate-y-1/2 object-cover"
-        src="https://www.youtube.com/embed/uGwJFecVPaQ?autoplay=1&mute=1&controls=0&loop=1&playlist=uGwJFecVPaQ&modestbranding=1&playsinline=1&rel=0"
-        frameborder="0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen loading="eager"></iframe>
-    </div>
-    <div id="hero-fallback" class="absolute inset-0 -z-30 overflow-hidden bg-black">
-      <img src="https://images.unsplash.com/photo-1519222970733-f546218fa6d0?fm=webp&w=1200&q=80" alt="Aloelujah Vintage Wellness" class="w-full h-full object-cover opacity-60" loading="eager" fetchpriority="high">
-    </div>
-    <div class="absolute inset-0 bg-gradient-to-b from-british-green/70 via-charcoal/40 to-champagne/90 z-10"></div>
-    <div class="absolute inset-0 bg-gradient-radial from-transparent via-british-green/10 to-british-green/40 z-10"></div>
-    <div class="absolute inset-0 z-20 pointer-events-none">
-      <div class="absolute top-8 left-8 w-16 h-16 border-t-2 border-l-2 border-gold/40"></div>
-      <div class="absolute top-8 right-8 w-16 h-16 border-t-2 border-r-2 border-gold/40"></div>
-      <div class="absolute bottom-8 left-8 w-16 h-16 border-b-2 border-l-2 border-gold/40"></div>
-      <div class="absolute bottom-8 right-8 w-16 h-16 border-b-2 border-r-2 border-gold/40"></div>
+  <header id="hero" role="banner" class="relative overflow-hidden" style="min-height:100svh;background-color:#1A3B32;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 24px 100px;">
+
+    <!-- Atmosphärischer Hintergrund -->
+    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
+      <div style="position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:70%;height:60%;background:radial-gradient(ellipse,rgba(212,175,135,0.11) 0%,transparent 65%);"></div>
+      <div style="position:absolute;bottom:10%;left:-5%;width:40%;height:50%;background:radial-gradient(ellipse,rgba(139,58,58,0.12) 0%,transparent 60%);"></div>
+      <div style="position:absolute;top:20%;right:-5%;width:35%;height:45%;background:radial-gradient(ellipse,rgba(212,175,135,0.07) 0%,transparent 60%);"></div>
+      <!-- Grain Textur -->
+      <div style="position:absolute;inset:0;opacity:0.035;background-image:url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E');background-size:256px 256px;"></div>
     </div>
 
-    <div class="relative z-30 text-center px-4 sm:px-6 max-w-5xl mx-auto">
-      <div class="deco-divider mb-4"><span class="deco-line"></span><span class="deco-diamond">◆</span><span class="deco-line"></span></div>
-      <p class="section-label text-champagne/90 mb-3 sm:mb-4">Bio Aloe Vera · Mallorca · 1920–1950er Flair</p>
-      <h1 class="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-canela text-gold leading-none">
-        <span class="letter">A</span><span class="letter">l</span><span class="letter">o</span><span class="letter">e</span><span class="letter">l</span><span class="letter">u</span><span class="letter">j</span><span class="letter">a</span><span class="letter">h</span>
-      </h1>
-      <p class="text-xl sm:text-3xl md:text-5xl font-serif text-champagne mt-4 sm:mt-6">Timeless Wellness &amp; <span class="text-gold">15 % Provision – jeden Monat</span></p>
-      <p class="text-base sm:text-xl md:text-2xl text-champagne/90 mt-6 sm:mt-8 max-w-3xl mx-auto px-2 font-body">Bio Aloe Vera aus Mallorca im Vintage-Stil. Für moderne Romantiker:innen.</p>
-      <div class="mt-8 sm:mt-12 flex flex-col sm:flex-row gap-4 sm:gap-6 justify-center px-4">
-        <a href="#partner" class="btn-ink art-deco-btn bg-gold text-british-green px-8 sm:px-14 py-4 sm:py-6 rounded-none text-base sm:text-xl font-medium hover:bg-emerald hover:text-champagne transition transform hover:scale-105 shadow-2xl">Jetzt Partner werden → 15 % Provision</a>
-        <a href="#quiz" class="art-deco-btn-outline border-2 border-gold text-gold px-8 sm:px-12 py-4 sm:py-6 rounded-none text-base sm:text-xl hover:bg-gold hover:text-british-green transition">Kostenloses Ritual finden</a>
+    <!-- Art-Déco Ecken -->
+    <div aria-hidden="true" style="position:absolute;top:24px;left:24px;width:70px;height:70px;border-top:1px solid rgba(212,175,135,0.55);border-left:1px solid rgba(212,175,135,0.55);"></div>
+    <div aria-hidden="true" style="position:absolute;top:24px;right:24px;width:70px;height:70px;border-top:1px solid rgba(212,175,135,0.55);border-right:1px solid rgba(212,175,135,0.55);"></div>
+    <div aria-hidden="true" style="position:absolute;bottom:80px;left:24px;width:70px;height:70px;border-bottom:1px solid rgba(212,175,135,0.55);border-left:1px solid rgba(212,175,135,0.55);"></div>
+    <div aria-hidden="true" style="position:absolute;bottom:80px;right:24px;width:70px;height:70px;border-bottom:1px solid rgba(212,175,135,0.55);border-right:1px solid rgba(212,175,135,0.55);"></div>
+
+    <!-- Botanische Seitendekorationen -->
+    <svg aria-hidden="true" class="hero-botanical-left" style="position:absolute;top:50%;left:-30px;transform:translateY(-50%);width:180px;opacity:0.07;pointer-events:none;" viewBox="0 0 200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 480 Q60 380 75 260 Q90 140 100 40" stroke="#D4AF87" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M100 380 Q40 340 28 270 Q16 200 55 175" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M88 320 Q130 285 110 230" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M100 270 Q38 240 25 185 Q12 130 52 108" stroke="#D4AF87" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="100" cy="380" rx="32" ry="14" transform="rotate(-25 100 380)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
+      <ellipse cx="88" cy="305" rx="26" ry="11" transform="rotate(18 88 305)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
+      <ellipse cx="100" cy="240" rx="28" ry="12" transform="rotate(-12 100 240)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
+      <circle cx="55" cy="175" r="3" fill="#D4AF87" opacity="0.4"/>
+      <circle cx="130" cy="230" r="2" fill="#D4AF87" opacity="0.3"/>
+    </svg>
+    <svg aria-hidden="true" class="hero-botanical-right" style="position:absolute;top:50%;right:-30px;transform:translateY(-50%) scaleX(-1);width:180px;opacity:0.07;pointer-events:none;" viewBox="0 0 200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M100 480 Q60 380 75 260 Q90 140 100 40" stroke="#D4AF87" stroke-width="2" fill="none" stroke-linecap="round"/>
+      <path d="M100 380 Q40 340 28 270 Q16 200 55 175" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M88 320 Q130 285 110 230" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
+      <path d="M100 270 Q38 240 25 185 Q12 130 52 108" stroke="#D4AF87" stroke-width="1.2" fill="none" stroke-linecap="round"/>
+      <ellipse cx="100" cy="380" rx="32" ry="14" transform="rotate(-25 100 380)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
+      <ellipse cx="88" cy="305" rx="26" ry="11" transform="rotate(18 88 305)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
+      <ellipse cx="100" cy="240" rx="28" ry="12" transform="rotate(-12 100 240)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
+      <circle cx="55" cy="175" r="3" fill="#D4AF87" opacity="0.4"/>
+      <circle cx="130" cy="230" r="2" fill="#D4AF87" opacity="0.3"/>
+    </svg>
+
+    <!-- Hero Inhalt -->
+    <div class="relative text-center" style="z-index:2;max-width:720px;display:flex;flex-direction:column;align-items:center;">
+
+      <!-- Ornament -->
+      <div aria-hidden="true" class="hero-reveal" style="display:flex;align-items:center;gap:10px;margin-bottom:18px;opacity:0;animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) forwards 0.15s;">
+        <div style="width:60px;height:1px;background:linear-gradient(to right,transparent,#D4AF87);"></div>
+        <div style="width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);opacity:0.6;"></div>
+        <div style="width:6px;height:6px;background:#D4AF87;transform:rotate(45deg);"></div>
+        <div style="width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);opacity:0.6;"></div>
+        <div style="width:60px;height:1px;background:linear-gradient(to left,transparent,#D4AF87);"></div>
       </div>
-      <!-- Social Proof -->
-      <div class="mt-8 flex flex-col items-center">
-        <div class="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-champagne/90 text-sm bg-charcoal/40 backdrop-blur-sm py-3 px-6 rounded-full">
-          <div class="flex items-center gap-1"><span class="text-gold text-xl tracking-wider">★★★★★</span><span class="font-bold text-champagne">4,9/5</span></div>
-          <span class="hidden sm:inline text-gold/50">|</span>
-          <div class="flex items-center gap-1"><span>🌿</span><span class="text-champagne">NATRUE Bio-zertifiziert</span></div>
-          <span class="hidden sm:inline text-gold/50">|</span>
-          <div class="flex items-center gap-1"><span>🛡️</span><span class="text-champagne">30 Tage Geld-zurück</span></div>
+
+      <!-- Script Tagline -->
+      <p style="font-family:'Great Vibes',cursive;font-size:clamp(22px,4vw,30px);color:#D4AF87;letter-spacing:1px;margin-bottom:10px;line-height:1;opacity:0;animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) forwards 0.35s;">direkt aus Mallorca</p>
+
+      <!-- Hauptheadline -->
+      <div style="font-family:'Playfair Display',serif;font-weight:700;line-height:0.88;letter-spacing:-1px;margin-bottom:6px;">
+        <span style="display:block;font-size:clamp(68px,16vw,120px);font-style:italic;color:#D4AF87;opacity:0;animation:heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards 0.55s;">Aloe-</span>
+        <span style="display:block;font-size:clamp(68px,16vw,120px);color:#FDFBF7;letter-spacing:2px;opacity:0;animation:heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards 0.65s;">lujah</span>
+      </div>
+
+      <!-- Gold Trennlinie -->
+      <div aria-hidden="true" style="width:100px;height:1px;background:linear-gradient(to right,transparent,#D4AF87,transparent);margin:22px auto;opacity:0;animation:heroFadeUp 0.7s ease forwards 0.85s;"></div>
+
+      <!-- Subheadline – führt mit Sehnsucht -->
+      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,2.8vw,23px);color:rgba(253,251,247,0.75);line-height:1.65;max-width:500px;letter-spacing:0.2px;opacity:0;animation:heroFadeUp 0.8s ease forwards 1.0s;">
+        Du weißt, dass deine Haut mehr verdient als Kompromisse.<br>
+        Echte Bio-Aloe-Vera – geerntet, wo die Sonne brennt und die Zeit langsamer läuft.
+      </p>
+
+      <!-- Benefit Pills -->
+      <div role="list" aria-label="Produktvorteile" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px;opacity:0;animation:heroFadeUp 0.8s ease forwards 1.15s;">
+        <span role="listitem" style="display:flex;align-items:center;gap:8px;background:rgba(212,175,135,0.1);border:1px solid rgba(212,175,135,0.28);border-radius:100px;padding:8px 18px;font-family:'Lora',serif;font-size:12.5px;letter-spacing:0.6px;color:#D4AF87;"><span style="width:5px;height:5px;background:#D4AF87;border-radius:50%;flex-shrink:0;display:inline-block;"></span>100 % Bio-zertifiziert</span>
+        <span role="listitem" style="display:flex;align-items:center;gap:8px;background:rgba(212,175,135,0.1);border:1px solid rgba(212,175,135,0.28);border-radius:100px;padding:8px 18px;font-family:'Lora',serif;font-size:12.5px;letter-spacing:0.6px;color:#D4AF87;"><span style="width:5px;height:5px;background:#D4AF87;border-radius:50%;flex-shrink:0;display:inline-block;"></span>Direktvertrieb aus Mallorca</span>
+        <span role="listitem" style="display:flex;align-items:center;gap:8px;background:rgba(212,175,135,0.1);border:1px solid rgba(212,175,135,0.28);border-radius:100px;padding:8px 18px;font-family:'Lora',serif;font-size:12.5px;letter-spacing:0.6px;color:#D4AF87;"><span style="width:5px;height:5px;background:#D4AF87;border-radius:50%;flex-shrink:0;display:inline-block;"></span>Ohne Füllstoffe & Kompromisse</span>
+      </div>
+
+      <!-- CTA Gruppe -->
+      <div style="display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:36px;opacity:0;animation:heroFadeUp 0.8s ease forwards 1.3s;">
+        <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
+          <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener"
+             style="font-family:'Lora',serif;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#1A3B32;background:#D4AF87;border:none;padding:17px 44px;text-decoration:none;display:inline-block;clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);transition:background 0.28s,transform 0.22s;"
+             onmouseover="this.style.background='#FDFBF7';this.style.transform='translateY(-3px)'"
+             onmouseout="this.style.background='#D4AF87';this.style.transform='translateY(0)'">
+            Mein Ritual entdecken
+          </a>
+          <a href="#partner"
+             style="font-family:'Lora',serif;font-size:14px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#D4AF87;background:transparent;border:1px solid rgba(212,175,135,0.5);padding:17px 32px;text-decoration:none;display:inline-block;clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);transition:all 0.28s;"
+             onmouseover="this.style.background='rgba(212,175,135,0.1)';this.style.borderColor='rgba(212,175,135,0.8)'"
+             onmouseout="this.style.background='transparent';this.style.borderColor='rgba(212,175,135,0.5)'">
+            15 % Provision → Partner werden
+          </a>
         </div>
-        <p class="text-champagne/80 text-xs mt-3">✦ Über 8.000 zufriedene Romantiker:innen ✦</p>
-      </div>
-      <div class="mt-6"><button id="enable-notifications" class="hidden art-deco-badge"><span>🔔</span> Ritual-Erinnerungen erhalten</button></div>
-      <div class="mt-8 flex flex-wrap justify-center gap-3 text-champagne/80 text-xs px-4">
-        <span class="whitespace-nowrap">EU-Bio-zertifiziert</span><span class="hidden sm:inline">•</span><span class="whitespace-nowrap">Handgeerntet</span><span class="hidden sm:inline">•</span><span class="whitespace-nowrap">Vegan</span><span class="hidden sm:inline">•</span><span class="whitespace-nowrap">Ohne Mikroplastik</span>
+
+        <!-- Sterne + Anzahl -->
+        <div style="display:flex;align-items:center;gap:10px;">
+          <div aria-label="5 von 5 Sternen" style="color:#D4AF87;font-size:15px;letter-spacing:2px;">★★★★★</div>
+          <span style="font-family:'Lora',serif;font-size:12px;color:rgba(253,251,247,0.5);letter-spacing:0.5px;">4,9/5 · Über 8.000 zufriedene Romantiker:innen</span>
+        </div>
+
+        <!-- Zertifikate -->
+        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:4px;">
+          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">EU-Bio-zertifiziert</span>
+          <span style="color:rgba(212,175,135,0.3);">•</span>
+          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">Handgeerntet</span>
+          <span style="color:rgba(212,175,135,0.3);">•</span>
+          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">Vegan</span>
+          <span style="color:rgba(212,175,135,0.3);">•</span>
+          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">Ohne Mikroplastik</span>
+        </div>
+
+        <button id="enable-notifications" class="hidden" style="background:transparent;border:1px solid rgba(212,175,135,0.4);color:rgba(253,251,247,0.6);padding:10px 20px;border-radius:40px;font-family:'Lora',serif;font-size:13px;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;">🔔 Ritual-Erinnerungen erhalten</button>
       </div>
     </div>
+
+    <!-- Social Proof Bar -->
+    <div role="complementary" aria-label="Zertifizierungen" style="position:absolute;bottom:0;left:0;right:0;background:rgba(20,48,41,0.96);border-top:1px solid rgba(212,175,135,0.18);padding:14px 32px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0;opacity:0;animation:heroFadeUp 0.7s ease forwards 1.6s;">
+      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
+        <span style="color:#D4AF87;font-size:12px;">✦</span> COSMOS Organic zertifiziert
+      </div>
+      <div style="width:1px;height:22px;background:rgba(212,175,135,0.2);flex-shrink:0;"></div>
+      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
+        <span style="color:#D4AF87;font-size:12px;">✦</span> <strong style="color:#FDFBF7;font-weight:500;">95 %</strong>&nbsp;natürliche Inhaltsstoffe
+      </div>
+      <div style="width:1px;height:22px;background:rgba(212,175,135,0.2);flex-shrink:0;"></div>
+      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
+        <span style="color:#D4AF87;font-size:12px;">✦</span> 30 Tage Geld-zurück-Garantie
+      </div>
+      <div style="width:1px;height:22px;background:rgba(212,175,135,0.2);flex-shrink:0;"></div>
+      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
+        <span style="color:#D4AF87;font-size:12px;">✦</span> The Mudita Circle Community
+      </div>
+    </div>
+
+    <!-- Hero Animation Keyframes -->
+    <style>
+      @keyframes heroFadeUp {
+        from { opacity: 0; transform: translateY(22px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      /* Nav Scroll Effect */
+      .nav-scrolled {
+        background: rgba(26,59,50,0.97) !important;
+        backdrop-filter: blur(12px);
+        border-bottom: 1px solid rgba(212,175,135,0.15);
+        padding-top: 12px !important;
+        padding-bottom: 12px !important;
+      }
+      /* Botanik auf mobil ausblenden */
+      @media (max-width: 768px) {
+        .hero-botanical-left, .hero-botanical-right { display: none !important; }
+      }
+    </style>
+
   </header>
 
   <!-- ===== STORY SECTION ===== -->
@@ -1045,7 +1175,17 @@
     })();
 
 
-    // Sticky Mobile CTA
+    // Nav Scroll Effect
+  (function(){
+    var nav = document.getElementById('mainNav');
+    if(!nav) return;
+    window.addEventListener('scroll', function(){
+      if(window.scrollY > 50){ nav.classList.add('nav-scrolled'); }
+      else { nav.classList.remove('nav-scrolled'); }
+    }, {passive:true});
+  })();
+
+  // Sticky Mobile CTA
 const stickyCta = document.getElementById('mobile-sticky-cta');
 const muditaSection = document.getElementById('mudita');
 const quizSection = document.getElementById('quiz');
@@ -1081,6 +1221,17 @@ if (stickyCta) {
     </a>
   </div>
 </div>
+
+<!-- Service Worker -->
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/sw.js')
+          .then(r => console.log('SW aktiv:', r.scope))
+          .catch(e => console.warn('SW Fehler:', e));
+      });
+    }
+  </script>
 
 </body>
 </html>
