@@ -1,12 +1,12 @@
 {
-  "name": "Aloelujah – Timeless Aloe Vera Wellness",
+  "name": "Aloelujah – WIR, MIT DIR... leben VITALITÄT!",
   "short_name": "Aloelujah",
-  "description": "Bio Aloe Vera aus Mallorca mit Vintage-Charme (1920–1950). Timeless Wellness for the Modern Romantic.",
+  "description": "Aloelujah by Danavara. Bio Aloe Vera aus Mallorca mit Vintage-Charme. Entdecke The Mudita Circle.",
   "start_url": "/?utm_source=pwa",
   "scope": "/",
   "display": "standalone",
   "orientation": "portrait",
-  "background_color": "#F5E6D3",
+  "background_color": "#1A3B32",
   "theme_color": "#D4AF87",
   "icons": [
     {
@@ -26,36 +26,12 @@
     {
       "name": "🛍️ Zum Shop",
       "short_name": "Shop",
-      "description": "Direkt zum Aloelujah Shop",
-      "url": "https://aloe-lujah.mivita.care?utm_source=pwa_shortcut",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "url": "https://aloe-lujah.mivita.care?utm_source=pwa_shortcut"
     },
     {
-      "name": "✨ Ritual des Tages",
-      "short_name": "Ritual",
-      "description": "Dein tägliches Aloe-Ritual",
-      "url": "/?utm_source=pwa_shortcut#rituals",
-      "icons": [{ "src": "/icon-192.png", "sizes": "192x192" }]
+      "name": "🌿 Mudita Circle",
+      "short_name": "Circle",
+      "url": "/?utm_source=pwa_shortcut#mudita"
     }
-  ],
-  "screenshots": [
-    {
-      "src": "/screenshot-mobile.png",
-      "sizes": "1170x2532",
-      "type": "image/png",
-      "form_factor": "narrow",
-      "label": "Aloelujah Startseite"
-    },
-    {
-      "src": "/screenshot-desktop.png",
-      "sizes": "1920x1080",
-      "type": "image/png",
-      "form_factor": "wide",
-      "label": "Aloelujah Desktop Ansicht"
-    }
-  ],
-  "categories": ["beauty", "lifestyle", "shopping"],
-  "lang": "de",
-  "dir": "ltr",
-  "prefer_related_applications": false
+  ]
 }
