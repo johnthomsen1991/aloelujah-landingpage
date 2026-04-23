@@ -1,1237 +1,1095 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
 <head>
-  <meta charset="utf-8" />
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Aloelujah — by Danavara</title>
+<meta name="description" content="Bio Aloe Vera Naturkosmetik, direkt aus Mallorca. Ein Ritual, das bleibt." />
 
-  <!-- A11y: maximum-scale entfernt, user-scalable=yes -->
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Cormorant+Garamond:ital,wght@0,400;0,500;1,300;1,400;1,500;1,600&family=Great+Vibes&display=swap" rel="stylesheet">
 
-  <title>Aloelujah – WIR, MIT DIR... leben VITALITÄT! | Bio Aloe Vera aus Mallorca</title>
-  <meta name="description" content="Aloelujah by Danavara. Bio-zertifizierte Aloe Vera aus Mallorca im Vintage-Stil. Entdecke The Mudita Circle und starte dein elegantes Einkommen." />
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
-  <!-- SEO Basics -->
-  <link rel="canonical" href="https://aloe-lujah.mivita.care/" />
-
-  <!-- Open Graph / Social Sharing -->
-  <meta property="og:title" content="Aloelujah – WIR, MIT DIR... leben VITALITÄT!" />
-  <meta property="og:description" content="Aloelujah by Danavara. Handgeerntete Bio-Aloe aus Mallorca mit 15% Provision." />
-  <meta property="og:image" content="https://deine-domain.de/og-image.jpg" />
-  <meta property="og:url" content="https://aloe-lujah.mivita.care/" />
-  <meta property="og:type" content="website" />
-  <meta property="og:locale" content="de_DE" />
-
-  <!-- Twitter Cards -->
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Aloelujah – WIR, MIT DIR... leben VITALITÄT!" />
-  <meta name="twitter:description" content="Bio Aloe Vera aus Mallorca mit Vintage-Flair und 15% Provision." />
-  <meta name="twitter:image" content="https://deine-domain.de/og-image.jpg" />
-
-  <!-- Theme Color & PWA -->
-  <meta name="theme-color" content="#D4AF87" />
-  <link rel="manifest" href="/manifest.json">
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <link rel="apple-touch-icon" href="/icon-192.png">
-
-  <!-- Favicon (Platzhalter) -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='45' fill='%231A3B32'/%3E%3Cpath d='M50 20 L60 40 L80 40 L65 55 L70 75 L50 65 L30 75 L35 55 L20 40 L40 40 Z' fill='%23D4AF87' opacity='0.8'/%3E%3Ctext x='50' y='70' font-family='serif' font-size='40' fill='%23D4AF87' text-anchor='middle' font-weight='bold'%3EA%3C/text%3E%3C/svg%3E">
-
-  <!-- Facebook Domain Verification -->
-  <meta name="facebook-domain-verification" content="DEIN_CODE_HIER_EINSETZEN" />
-
-  <!-- Microsoft Clarity -->
-  <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "DEIN_CLARITY_CODE_HIER_EINSETZEN");
-  </script>
-
-  <!-- OneSignal Web Push -->
-  <script src="https://cdn.onesignal.com/sdks/OneSignalSDK.js" async=""></script>
-  <script>
-    window.OneSignal = window.OneSignal || [];
-    OneSignal.push(function() {
-      OneSignal.init({
-        appId: "DEIN_ONESIGNAL_APP_ID_HIER_EINSETZEN",
-        notifyButton: { enable: false },
-        allowLocalhostAsSecureOrigin: true,
-      });
-    });
-  </script>
-
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" />
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Lora:ital,wght@0,400;0,500;0,600;1,400&family=Great+Vibes&family=Cormorant+Garamond:ital,wght@1,300;1,400;1,500&display=swap" rel="stylesheet" />
-
-  <!-- Libraries (GSAP, Lenis – bewährte Versionen) -->
-  <script src="https://cdn.tailwindcss.com"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
-  <!-- jsPDF für PDF-Download (wieder eingebaut) -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
-  <!-- TikTok Pixel -->
-  <script>
-  !function (w, d, t) {
-    w.TiktokAnalyticsObject=t;var ttq=w[t]=w[t]||[];ttq.methods=["page","track","identify","instances","debug","on","off","once","ready","alias","group","enableCookie","disableCookie"],ttq.setAndDefer=function(t,e){t[e]=function(){t.push([e].concat(Array.prototype.slice.call(arguments,0)))}};for(var i=0;i<ttq.methods.length;i++)ttq.setAndDefer(ttq,ttq.methods[i]);ttq.instance=function(t){for(var e=ttq._i[t]||[],n=0;n<ttq.methods.length;n++)ttq.setAndDefer(e,ttq.methods[n]);return e},ttq.load=function(e,n){var i="https://analytics.tiktok.com/i18n/pixel/events.js";ttq._i=ttq._i||{},ttq._i[e]=[],ttq._i[e]._u=i,ttq._t=ttq._t||{},ttq._t[e]=+new Date,ttq._o=ttq._o||{},ttq._o[e]=n||{};var o=document.createElement("script");o.type="text/javascript",o.async=!0,o.src=i+"?sdkid="+e+"&lib="+t;var a=document.getElementsByTagName("script")[0];a.parentNode.insertBefore(o,a)};
-    ttq.load('DEIN_TIKTOK_PIXEL_CODE_HIER_EINSETZEN');
-    ttq.page();
-  }(window, document, 'ttq');
-  </script>
-
-  <!-- Meta Pixel -->
-  <script>
-  !function(f,b,e,v,n,t,s)
-  {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-  n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-  if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-  n.queue=[];t=b.createElement(e);t.async=!0;
-  t.src=v;s=b.getElementsByTagName(e)[0];
-  s.parentNode.insertBefore(t,s)}(window, document,'script',
-  'https://connect.facebook.net/en_US/fbevents.js');
-  fbq('init', 'DEIN_META_PIXEL_CODE_HIER_EINSETZEN');
-  fbq('track', 'PageView');
-  </script>
-  <noscript><img height="1" width="1" style="display:none"
-  src="https://www.facebook.com/tr?id=DEIN_META_PIXEL_CODE_HIER_EINSETZEN&ev=PageView&noscript=1"
-  /></noscript>
-
-  <!-- Structured Data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Aloelujah",
-    "url": "https://aloe-lujah.mivita.care",
-    "logo": "/icon-512.png",
-    "description": "Bio Aloe Vera aus Mallorca mit Vintage-Charme und zeitlosen Wellness-Ritualen.",
-    "sameAs": [
-      "https://instagram.com/aloelujah",
-      "https://tiktok.com/@aloelujah"
-    ],
-    "parentOrganization": {
-      "@type": "Organization",
-      "name": "Danavara"
-    }
+<style>
+  :root{
+    --green:#1A3B32;
+    --green-deep:#122A24;
+    --gold:#D4AF87;
+    --gold-soft:#E6CBA8;
+    --cognac:#8B3A3A;
+    --cream:#FDFBF7;
+    --cream-warm:#F6EFE2;
+    --charcoal:#2F2E2D;
   }
-  </script>
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--cream);
+    color:var(--charcoal);
+    font-family:'Lora', Georgia, serif;
+    font-weight:400;
+    -webkit-font-smoothing:antialiased;
+    text-rendering:optimizeLegibility;
+  }
+  .font-display{font-family:'Playfair Display', serif;}
+  .font-body{font-family:'Lora', Georgia, serif;}
+  .font-script{font-family:'Great Vibes', cursive;}
+  .font-quote{font-family:'Cormorant Garamond', serif;}
 
-  <!-- ===== TAILWIND CONFIG (Alle Farben registriert) ===== -->
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            gold: '#D4AF87',
-            champagne: '#F5E6D3',
-            'champagne-dark': '#E3CDB1',
-            emerald: '#0A3D3A',
-            'british-green': '#1A3B32',
-            'deep-sapphire': '#0F2B3D',
-            dustyrose: '#C49A9A',
-            charcoal: '#2F2E2D',
-            blush: '#F9E4DD',
-            'vintage-cream': '#FDFBF7',
-            cognac: '#8B3A3A',
-            burgundy: '#6E2C2C'
-          },
-          fontFamily: {
-            canela: ['"Playfair Display"', 'serif'],
-            serif: ['"Playfair Display"', 'serif'],
-            script: ['"Great Vibes"', 'cursive'],
-            body: ['Lora', 'serif'],
-            deco: ['"Cormorant Garamond"', 'serif']
-          }
-        }
-      }
-    }
-  </script>
+  /* ── Grain texture ────────────────────────── */
+  .grain{position:relative;}
+  .grain::after{
+    content:"";position:absolute;inset:0;pointer-events:none;
+    background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='220' height='220'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 0.5 0'/></filter><rect width='100%' height='100%' filter='url(%23n)' opacity='0.55'/></svg>");
+    opacity:.08;mix-blend-mode:overlay;z-index:1;
+  }
+  .grain-light::after{opacity:.05;mix-blend-mode:multiply;}
+  .grain > *{position:relative;z-index:2;}
 
-  <style>
-    /* ===== ALLE FARB-VARIABLEN ===== */
-    :root {
-      --gold: #D4AF87;
-      --champagne: #F5E6D3;
-      --emerald: #0A3D3A;
-      --charcoal: #2F2E2D;
-      --british-green: #1A3B32;
-      --cognac: #8B3A3A;
-      --vintage-cream: #FDFBF7;
-      --champagne-dark: #E3CDB1;
-      --deep-sapphire: #0F2B3D;
-      --burgundy: #6E2C2C;
-    }
+  /* ── Hero atmospheric gradients ────────────── */
+  .hero-bg{
+    background:
+      radial-gradient(ellipse 70% 55% at 18% 28%, rgba(212,175,135,.18), transparent 60%),
+      radial-gradient(ellipse 60% 45% at 85% 80%, rgba(139,58,58,.22), transparent 65%),
+      radial-gradient(ellipse 90% 70% at 50% 110%, rgba(0,0,0,.55), transparent 70%),
+      linear-gradient(180deg, #12302A 0%, #1A3B32 45%, #0E241F 100%);
+  }
+  .cream-bg{
+    background:
+      radial-gradient(ellipse 50% 40% at 0% 0%, rgba(212,175,135,.12), transparent 60%),
+      radial-gradient(ellipse 60% 50% at 100% 100%, rgba(139,58,58,.06), transparent 65%),
+      var(--cream);
+  }
 
-    html, body {
-      background: var(--champagne);
-      color: var(--charcoal);
-      font-family: Lora, serif;
-      -webkit-font-smoothing: antialiased;
-      -moz-osx-font-smoothing: grayscale;
-      overflow-x: hidden;
-      width: 100%;
-    }
+  /* ── Art déco buttons (clip-path chamfer) ─── */
+  .btn-deco{
+    position:relative;
+    display:inline-flex;align-items:center;justify-content:center;
+    gap:.6rem;
+    padding:1.05rem 2.2rem;
+    font-family:'Lora', serif;
+    font-weight:500;
+    font-size:.95rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    cursor:pointer;
+    transition:transform .45s cubic-bezier(.2,.8,.2,1), background .35s, color .35s, box-shadow .45s;
+    clip-path: polygon(14px 0, calc(100% - 14px) 0, 100% 14px, 100% calc(100% - 14px), calc(100% - 14px) 100%, 14px 100%, 0 calc(100% - 14px), 0 14px);
+  }
+  .btn-deco .arrow{display:inline-block;transition:transform .4s cubic-bezier(.2,.8,.2,1);}
+  .btn-deco:hover .arrow{transform:translateX(6px);}
+  .btn-gold{
+    background:var(--gold);
+    color:var(--green-deep);
+    box-shadow:0 1px 0 rgba(255,255,255,.4) inset, 0 10px 30px -12px rgba(212,175,135,.55);
+  }
+  .btn-gold:hover{background:var(--gold-soft); transform:translateY(-2px);}
+  .btn-ghost{
+    background:transparent;
+    color:var(--gold);
+    box-shadow:inset 0 0 0 1px var(--gold);
+  }
+  .btn-ghost:hover{background:rgba(212,175,135,.1); color:var(--gold-soft); transform:translateY(-2px);}
+  .btn-deco.on-cream.btn-ghost{color:var(--green-deep);box-shadow:inset 0 0 0 1px var(--green-deep);}
+  .btn-deco.on-cream.btn-ghost:hover{background:rgba(26,59,50,.06);}
 
-    .grain {
-      position: fixed; inset: 0; pointer-events: none; z-index: -1;
-      background: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='4' height='4'><rect width='4' height='4' fill='%23f5e6d3'/><rect width='1' height='1' fill='%23d4af87' opacity='0.08'/></svg>");
-      animation: grain 12s steps(10) infinite;
-      will-change: transform;
-    }
-    @keyframes grain { from { transform: translate(0,0); } to { transform: translate(4px,4px); } }
+  /* ── Art déco ornament line ────────────────── */
+  .deco-line{
+    display:flex;align-items:center;justify-content:center;gap:14px;
+    color:var(--gold);
+  }
+  .deco-line .rule{
+    height:1px;width:72px;background:linear-gradient(90deg, transparent, currentColor, transparent);
+  }
+  .deco-line .diamond{
+    width:7px;height:7px;background:currentColor;
+    transform:rotate(45deg);
+  }
+  .deco-line .diamond.hollow{
+    background:transparent;box-shadow:inset 0 0 0 1px currentColor;
+  }
 
-    @media (hover: hover) and (pointer: fine) {
-      .cursor {
-        position: fixed; left:0; top:0; width:28px; height:28px;
-        border:2px solid var(--gold); border-radius:50%; pointer-events:none;
-        z-index:9999; mix-blend-mode:difference; transform:translate(-50%,-50%);
-        transition:all 0.3s ease-out;
-      }
-      .cursor.hover { width:90px; height:90px; background:rgba(212,175,135,0.12); border-width:3px; }
-      .cursor.hover::after {
-        content:''; position:absolute; inset:0;
-        background:url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><path d="M50,10 L60,40 L90,40 L65,60 L75,90 L50,70 L25,90 L35,60 L10,40 L40,40 Z" fill="none" stroke="%23D4AF87" stroke-width="2"/></svg>') center/40% no-repeat;
-        animation:spin 5s linear infinite;
-      }
-    }
-    @keyframes spin { to { transform:rotate(360deg); } }
+  /* ── Frames / cards ────────────────────────── */
+  .deco-frame{
+    position:relative;
+    padding:2.25rem;
+    background:rgba(253,251,247,.55);
+    box-shadow:inset 0 0 0 1px rgba(26,59,50,.14);
+  }
+  .deco-frame::before, .deco-frame::after{
+    content:"";position:absolute;width:18px;height:18px;
+    border:1px solid var(--gold);
+  }
+  .deco-frame::before{top:8px;left:8px;border-right:none;border-bottom:none;}
+  .deco-frame::after{bottom:8px;right:8px;border-left:none;border-top:none;}
+  .deco-frame .corner{position:absolute;width:18px;height:18px;border:1px solid var(--gold);}
+  .deco-frame .corner.tr{top:8px;right:8px;border-left:none;border-bottom:none;}
+  .deco-frame .corner.bl{bottom:8px;left:8px;border-right:none;border-top:none;}
 
-    .letter { display:inline-block; opacity:0; transform:translateY(80px); }
-    .btn-ink { position:relative; overflow:hidden; }
-    .btn-ink::before {
-      content:""; position:absolute; inset:0;
-      background:radial-gradient(circle at 10% 0%, rgba(255,255,255,0.35) 0, transparent 50%);
-      transform:translateX(-120%); transition:transform .6s ease-out; mix-blend-mode:screen;
-    }
-    .btn-ink:hover::before { transform:translateX(120%); }
+  .card-green{
+    background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(0,0,0,.15)), var(--green);
+    box-shadow:inset 0 0 0 1px rgba(212,175,135,.28), 0 30px 60px -40px rgba(0,0,0,.7);
+  }
 
-    .script-breath { animation:scriptBreath 5s ease-in-out infinite; }
-    @keyframes scriptBreath { 0%,100%{transform:translateY(0);opacity:.95} 50%{transform:translateY(-2px);opacity:1} }
+  /* ── Pills ──────────────────────────────── */
+  .pill{
+    display:inline-flex;align-items:center;gap:.55rem;
+    padding:.5rem 1rem;
+    border:1px solid rgba(212,175,135,.55);
+    color:var(--gold-soft);
+    font-family:'Lora', serif;
+    font-size:.78rem;
+    letter-spacing:.22em;
+    text-transform:uppercase;
+    border-radius:999px;
+  }
+  .pill .dot{width:4px;height:4px;background:var(--gold);transform:rotate(45deg);}
 
-    .reveal { opacity:0; transform:translateY(30px); transition:all 0.8s cubic-bezier(0.25,0.8,0.25,1); }
-    .reveal.visible { opacity:1; transform:translateY(0); }
+  /* ── Nav ────────────────────────────────── */
+  .nav-root{
+    position:fixed;top:0;left:0;right:0;z-index:60;
+    transition:background .4s ease, backdrop-filter .4s ease, box-shadow .4s ease, padding .4s ease;
+    padding:1.25rem 0;
+  }
+  .nav-root.scrolled{
+    background:rgba(18,42,36,.72);
+    backdrop-filter:blur(14px) saturate(140%);
+    -webkit-backdrop-filter:blur(14px) saturate(140%);
+    box-shadow:0 1px 0 rgba(212,175,135,.18);
+    padding:.75rem 0;
+  }
+  .nav-link{
+    position:relative;
+    font-family:'Lora', serif;
+    font-size:.82rem;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:rgba(253,251,247,.75);
+    transition:color .3s;
+  }
+  .nav-link::after{
+    content:"";position:absolute;left:50%;bottom:-6px;width:0;height:1px;background:var(--gold);
+    transition:all .35s cubic-bezier(.2,.8,.2,1);transform:translateX(-50%);
+  }
+  .nav-link:hover{color:var(--cream);}
+  .nav-link:hover::after{width:24px;}
 
-    .sticky-parent { position:relative; height:170vh; }
-    @media (min-width:1024px) { .sticky-child { position:sticky; top:8vh; } }
+  /* ── Hero H1 ─────────────────────────────── */
+  .hero-h1{
+    font-family:'Playfair Display', serif;
+    line-height:.88;
+    letter-spacing:-.02em;
+  }
+  .hero-h1 .line1{
+    font-style:italic;
+    font-weight:600;
+    color:var(--gold);
+    font-size:clamp(4.5rem, 14vw, 12rem);
+    display:block;
+    letter-spacing:-.03em;
+  }
+  .hero-h1 .line2{
+    font-weight:400;
+    color:var(--cream);
+    font-size:clamp(5rem, 16vw, 14rem);
+    display:block;
+    margin-top:-.12em;
+    margin-left:.12em;
+    letter-spacing:-.03em;
+  }
 
-    .partner-cta { background:linear-gradient(135deg, #F5E6D3 0%, #F9E4DD 100%); }
-    .hover-title-gradient { transition:color .35s ease; }
-    .hover-title-gradient:hover { color:var(--gold); }
-    .gold-frame { border:2px solid rgba(212,175,135,0.6); box-shadow:0 0 22px rgba(212,175,135,0.18); }
+  /* ── Section diagonal cut ─────────────────── */
+  .diag-to-green{
+    position:relative;
+    background:var(--cream);
+  }
+  .diag-to-green::after{
+    content:"";position:absolute;left:0;right:0;bottom:-1px;height:120px;
+    background:var(--green);
+    clip-path:polygon(0 100%, 100% 100%, 100% 0, 0 70%);
+  }
 
-    .quiz-answer-btn {
-      background: white; color: #2F2E2D; border: 1px solid #D4AF87;
-      transition: all 0.3s; padding: 1rem;
-    }
-    .quiz-answer-btn:hover { background: var(--gold); color: var(--charcoal); font-weight: 500; }
+  /* ── FAQ accordion ────────────────────────── */
+  .faq-item{
+    border-top:1px solid rgba(26,59,50,.22);
+  }
+  .faq-item:last-child{border-bottom:1px solid rgba(26,59,50,.22);}
+  .faq-item .diamond-bullet{
+    width:8px;height:8px;background:var(--gold);transform:rotate(45deg);
+    transition:transform .4s cubic-bezier(.2,.8,.2,1);
+    flex-shrink:0;
+  }
+  .faq-item[open] .diamond-bullet{background:var(--cognac);transform:rotate(225deg);}
+  .faq-item summary{list-style:none;cursor:pointer;}
+  .faq-item summary::-webkit-details-marker{display:none;}
+  .faq-item summary{
+    padding:1.75rem 0;
+    display:flex;align-items:center;justify-content:space-between;gap:1.5rem;
+  }
 
-    #mobile-menu { transition: opacity 0.3s ease, transform 0.3s ease; }
-    #mobile-menu.hidden { display: none; }
+  /* ── Timeline dots ─────────────────────── */
+  .timeline-row{
+    display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;
+  }
+  .timeline-year{
+    font-family:'Playfair Display', serif;font-style:italic;
+    color:var(--cognac);font-size:1.8rem;line-height:1;
+    padding-top:.2rem;letter-spacing:-.01em;
+    min-width:7ch;
+  }
+  .timeline-line{
+    position:absolute;left:0;top:0;bottom:0;width:1px;background:linear-gradient(180deg, transparent, rgba(26,59,50,.3), transparent);
+  }
 
-    /* Social Proof Popup */
-    #social-proof-popup {
-      position: fixed; bottom: 20px; left: 20px; background: white;
-      border-left: 4px solid var(--gold); border-radius: 12px; padding: 12px 16px;
-      box-shadow: 0 10px 30px rgba(0,0,0,0.1); z-index: 1000; max-width: 280px;
-      font-family: 'Lora', serif; opacity: 0; transform: translateX(-20px);
-      transition: all 0.4s ease; pointer-events: none; border: 1px solid rgba(212,175,135,0.3);
-    }
-    #social-proof-popup.show { opacity: 1; transform: translateX(0); }
-    #social-proof-popup .time { font-size: 11px; color: var(--charcoal); opacity: 0.6; margin-top: 4px; }
-    #social-proof-popup .product { font-weight: 600; color: var(--emerald); }
+  /* ── Reveal animation ─────────────────── */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity 1.1s cubic-bezier(.2,.8,.2,1), transform 1.1s cubic-bezier(.2,.8,.2,1);}
+  .reveal.in{opacity:1;transform:none;}
 
-    /* Exit-Intent Popup */
-    #exit-popup {
-      position: fixed; inset: 0; background: rgba(47, 46, 45, 0.7); backdrop-filter: blur(4px);
-      z-index: 10000; display: none; align-items: center; justify-content: center; padding: 20px;
-    }
-    #exit-popup.show { display: flex; }
-    .exit-letter {
-      background: var(--champagne); max-width: 450px; width: 100%; border-radius: 20px;
-      padding: 32px 24px; position: relative; border: 2px solid var(--gold);
-      box-shadow: 0 25px 50px -12px rgba(0,0,0,0.25); animation: letterAppear 0.5s ease;
-    }
-    @keyframes letterAppear {
-      from { opacity: 0; transform: scale(0.9) translateY(20px); }
-      to { opacity: 1; transform: scale(1) translateY(0); }
-    }
-    .exit-letter .wax-seal {
-      width: 40px; height: 40px; background: var(--emerald); border-radius: 50%;
-      position: absolute; top: -15px; right: 30px; border: 3px solid var(--gold);
-      display: flex; align-items: center; justify-content: center; color: var(--gold); font-size: 20px;
-    }
+  /* ── Selection ─────────────────────────── */
+  ::selection{background:var(--gold);color:var(--green-deep);}
 
-    /* Ja-Straße */
-    .ja-strasse-container {
-      background: rgba(212,175,135,0.1); border-radius: 24px; padding: 24px;
-      margin: 20px 0; border: 1px dashed var(--gold);
-    }
-    .ja-step { display: flex; align-items: center; gap: 12px; margin-bottom: 16px; opacity: 0.5; }
-    .ja-step.completed { opacity: 1; }
-    .ja-step .check {
-      width: 28px; height: 28px; border-radius: 50%; background: white;
-      border: 2px solid var(--gold); display: flex; align-items: center; justify-content: center;
-      color: var(--emerald); font-weight: bold;
-    }
-    .ja-step.completed .check { background: var(--emerald); border-color: var(--emerald); color: white; }
-    .ja-step p { font-family: 'Playfair Display', serif; font-size: 1.1rem; color: var(--charcoal); }
+  /* ── Mobile menu ─────────────────────── */
+  .mobile-menu{
+    position:fixed;inset:0;background:var(--green-deep);
+    transform:translateY(-100%);transition:transform .6s cubic-bezier(.2,.8,.2,1);
+    z-index:70;
+  }
+  .mobile-menu.open{transform:none;}
 
-    #enable-notifications {
-      background: transparent; border: 1px solid var(--gold); color: var(--charcoal);
-      padding: 10px 20px; border-radius: 40px; font-family: 'Lora', serif; font-size: 14px;
-      cursor: pointer; transition: all 0.3s; display: inline-flex; align-items: center; gap: 8px;
-    }
-    #enable-notifications:hover { background: var(--gold); color: white; }
-    #enable-notifications.hidden { display: none; }
+  /* ── Utility ───────────────────────────── */
+  .txt-gold{color:var(--gold);}
+  .txt-cream{color:var(--cream);}
+  .txt-green{color:var(--green);}
+  .txt-cognac{color:var(--cognac);}
+  .txt-charcoal{color:var(--charcoal);}
+  .bg-green{background:var(--green);}
+  .bg-cream{background:var(--cream);}
+  .rule-gold{height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);}
+  .rule-green{height:1px;background:linear-gradient(90deg, transparent, rgba(26,59,50,.4), transparent);}
 
-    .price-anchor { text-decoration: line-through; color: var(--charcoal); opacity: 0.5; font-size: 0.9em; margin-right: 8px; }
-    .price-current { color: var(--emerald); font-weight: bold; }
+  /* Drop-cap on story */
+  .dropcap::first-letter{
+    font-family:'Playfair Display', serif;font-style:italic;font-weight:600;
+    float:left;font-size:5.2rem;line-height:.85;padding:.35rem .6rem 0 0;
+    color:var(--cognac);
+  }
 
-    /* Art-Déco Elemente */
-    .bg-gradient-radial { background: radial-gradient(circle at center, var(--tw-gradient-from) 0%, var(--tw-gradient-via) 50%, var(--tw-gradient-to) 100%); }
-    .bg-british-green { background-color: var(--british-green); }
-    .bg-gold-gradient { background: linear-gradient(135deg, var(--champagne-dark) 0%, var(--champagne) 50%, rgba(212, 175, 135, 0.15) 100%); }
-
-    h2 { font-family: 'Playfair Display', serif; letter-spacing: 0.02em; }
-    h3 { font-family: 'Lora', serif; font-weight: 500; letter-spacing: 0.05em; }
-    .section-label { font-family: 'Lora', serif; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.3em; color: var(--gold); }
-    .quote-text { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.25rem; line-height: 1.6; }
-
-    .deco-divider { display: flex; align-items: center; justify-content: center; width: 100%; max-width: 300px; margin: 1rem auto; }
-    .deco-divider .deco-line { flex: 1; height: 1px; background: linear-gradient(90deg, transparent, var(--gold), transparent); }
-    .deco-divider .deco-diamond { margin: 0 1.5rem; color: var(--gold); font-size: 0.75rem; }
-
-    .art-deco-frame {
-      position: relative; border: 1px solid rgba(212, 175, 135, 0.4); padding: 2rem;
-      background: var(--vintage-cream); transition: all 0.3s ease;
-    }
-    .art-deco-frame::before, .art-deco-frame::after {
-      content: ''; position: absolute; width: 20px; height: 20px;
-      border-style: solid; border-color: var(--gold); transition: all 0.3s ease;
-    }
-    .art-deco-frame::before { top: -5px; left: -5px; border-width: 2px 0 0 2px; }
-    .art-deco-frame::after { bottom: -5px; right: -5px; border-width: 0 2px 2px 0; }
-    .art-deco-frame:hover { border-color: var(--gold); box-shadow: 4px 4px 0px rgba(212, 175, 135, 0.08), 6px 6px 12px rgba(0, 0, 0, 0.02); }
-    .art-deco-frame:hover::before, .art-deco-frame:hover::after { width: 30px; height: 30px; }
-
-    .art-deco-btn { position: relative; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
-    .art-deco-btn-outline { position: relative; clip-path: polygon(0 0, 100% 0, 100% calc(100% - 8px), calc(100% - 8px) 100%, 0 100%); }
-
-    .art-deco-badge {
-      display: inline-block; padding: 0.5rem 1.5rem; border: 1px solid var(--gold);
-      background: transparent; font-family: 'Cormorant Garamond', serif;
-      letter-spacing: 0.2em; text-transform: uppercase; font-size: 0.7rem; position: relative;
-    }
-    .art-deco-badge::before, .art-deco-badge::after {
-      content: '◆'; position: absolute; top: 50%; transform: translateY(-50%);
-      color: var(--gold); font-size: 0.5rem;
-    }
-    .art-deco-badge::before { left: 0.3rem; } .art-deco-badge::after { right: 0.3rem; }
-
-    .heraldic-ornament { display: flex; align-items: center; justify-content: center; gap: 1rem; color: var(--gold); opacity: 0.6; font-size: 1.5rem; }
-    .timeline-diamond { width: 12px; height: 12px; background: var(--gold); transform: rotate(45deg); border: 2px solid var(--champagne); box-shadow: 0 0 10px rgba(212, 175, 135, 0.5); }
-    .product-card { background: var(--vintage-cream); border: 1px solid rgba(212, 175, 135, 0.2); }
-    .product-card:hover { border-color: var(--gold); box-shadow: 0 20px 40px -15px rgba(10, 61, 58, 0.15); }
-
-    /* Vintage Pattern */
-    .bg-vintage-pattern {
-      background-color: #E8D5B8;
-      background-image: url("data:image/svg+xml,%3Csvg width='80' height='80' viewBox='0 0 80 80' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M40 10 L70 40 L40 70 L10 40 L40 10' stroke='%23D4AF87' stroke-width='1' fill='none' opacity='0.15'/%3E%3C/svg%3E");
-    }
-
-
-    /* Sticky Mobile CTA */
-.mobile-sticky-footer {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: rgba(245, 230, 211, 0.95);
-  backdrop-filter: blur(8px);
-  padding: 12px 16px;
-  border-top: 1px solid var(--gold);
-  z-index: 100;
-  box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
-}
-
-@media (min-width: 768px) {
-  .mobile-sticky-footer { display: none !important; }
-}
-
-@media (max-width: 767px) {
-  .mobile-sticky-footer { display: block !important; }
-  footer { padding-bottom: 80px !important; }
-}
-
-
-  </style>
-
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(reg => console.log('Service Worker registriert'))
-          .catch(err => console.log('SW fehlgeschlagen'));
-      });
-    }
-  </script>
+  /* Big numeric */
+  .big-num{
+    font-family:'Playfair Display', serif;font-style:italic;font-weight:600;
+    font-size:clamp(7rem, 18vw, 14rem);line-height:.85;letter-spacing:-.03em;
+    color:var(--gold);
+  }
+</style>
 </head>
+<body class="overflow-x-hidden">
 
-<body class="bg-champagne text-charcoal overflow-x-hidden">
-
-  <div class="grain" aria-hidden="true"></div>
-  <div id="cursor" class="cursor hidden md:block" aria-hidden="true"></div>
-
-  <!-- Social Proof Popup -->
-  <div id="social-proof-popup">
-    <span id="social-proof-text">Gerade hat <strong>Clara</strong> aus <strong>München</strong> das <span class="product">Timeless Elixir</span> gekauft</span>
-    <div class="time" id="social-proof-time">vor 2 Minuten</div>
-  </div>
-
-  <!-- Exit Popup -->
-  <div id="exit-popup">
-    <div class="exit-letter">
-      <div class="wax-seal">✨</div>
-      <h3 class="font-serif text-2xl text-emerald mb-2">Einen Moment, Liebes...</h3>
-      <p class="font-script text-4xl text-gold mb-4">Before you go</p>
-      <p class="text-charcoal/80 mb-6">Bevor du gehst – möchtest du ein kleines Geschenk?</p>
-      <div class="bg-blush/30 rounded-xl p-4 mb-6 text-center">
-        <p class="font-serif text-lg">"3 Rituale aus 1920 für deine tägliche Auszeit"</p>
-        <p class="text-xs text-charcoal/60 mt-1">+ 10% Rabatt auf deine erste Bestellung</p>
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- NAV                                                 -->
+<!-- ═══════════════════════════════════════════════════ -->
+<nav class="nav-root" id="nav">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10 flex items-center justify-between">
+    <a href="#top" class="flex items-center gap-3 group">
+      <!-- Aloe monogram -->
+      <svg viewBox="0 0 48 48" class="w-11 h-11" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#E6CBA8"/>
+            <stop offset="1" stop-color="#B38B5E"/>
+          </linearGradient>
+        </defs>
+        <!-- Two stylised aloe leaves forming an A -->
+        <path d="M24 6 C 18 14, 14 26, 12 40 L 18 40 C 19 30, 21 22, 24 16 Z" fill="url(#lg1)"/>
+        <path d="M24 6 C 30 14, 34 26, 36 40 L 30 40 C 29 30, 27 22, 24 16 Z" fill="url(#lg1)" opacity=".82"/>
+        <rect x="16" y="30" width="16" height="1" fill="#D4AF87"/>
+        <!-- tiny serrations -->
+        <g fill="#D4AF87" opacity=".55">
+          <circle cx="15" cy="24" r=".7"/><circle cx="14" cy="30" r=".7"/><circle cx="33" cy="24" r=".7"/><circle cx="34" cy="30" r=".7"/>
+        </g>
+      </svg>
+      <div class="leading-tight">
+        <div class="font-display italic txt-gold text-[1.35rem] tracking-tight">Aloelujah</div>
+        <div class="font-script txt-cream/70 text-base -mt-1" style="color:rgba(253,251,247,.65)">by Danavara</div>
       </div>
-      <form id="exit-form" class="space-y-3">
-        <input type="email" placeholder="Deine E-Mail" required class="w-full border border-gold/50 rounded-full px-5 py-3 bg-white/80">
-        <button type="submit" class="w-full bg-emerald text-champagne py-3 rounded-full font-medium hover:bg-gold">Ja, Guide sichern →</button>
-      </form>
-      <button id="exit-close" class="mt-4 text-xs text-charcoal/50 underline">Nein danke</button>
-    </div>
-  </div>
+    </a>
 
-  <!-- FTC Disclosure -->
-  <div class="bg-gold/10 border-b border-gold/40 py-2.5 text-center text-xs sm:text-sm font-medium z-40 relative">
-    <p class="text-charcoal/80 max-w-4xl mx-auto px-4">
-      Disclosure: Als Vertriebspartner von mivita.care verdienen wir Provisionen. Alle Empfehlungen basieren auf echter Überzeugung.
-    </p>
-  </div>
-
-  <!-- ===== NAVBAR (Aloelujah – neuer Hero) ===== -->
-  <nav class="fixed top-0 w-full z-50 transition-all duration-400" id="mainNav" style="background:transparent;">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 py-4 flex items-center justify-between">
-
-      <!-- Logo -->
-      <a href="/" class="flex items-center gap-3" aria-label="Aloelujah – Startseite">
-        <svg width="44" height="44" viewBox="0 0 44 44" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-          <path d="M22 38 C22 38 8 28 10 16 C12 8 18 6 22 10" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <path d="M22 38 C22 38 36 28 34 16 C32 8 26 6 22 10" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-          <path d="M17 11 C17 8 19.5 6 22 8 C24.5 6 27 8 27 11 C27 14 22 17 22 17 C22 17 17 14 17 11Z" fill="#D4AF87" opacity="0.85"/>
-          <path d="M7 20 C7 16 9 13 12 13 C10 15 10 18 12 20 C10 22 9 24 10 26 C8 25 7 23 7 20Z" fill="#D4AF87" opacity="0.5"/>
-          <circle cx="36" cy="14" r="1.5" fill="#D4AF87" opacity="0.6"/>
-          <circle cx="38" cy="20" r="1" fill="#D4AF87" opacity="0.4"/>
-          <circle cx="36" cy="26" r="1.5" fill="#D4AF87" opacity="0.6"/>
-          <line x1="22" y1="17" x2="22" y2="38" stroke="#D4AF87" stroke-width="1" stroke-dasharray="2 2" opacity="0.5"/>
-        </svg>
-        <div class="flex flex-col leading-none">
-          <span style="font-family:'Playfair Display',serif;font-size:22px;font-weight:700;color:#D4AF87;letter-spacing:1px;">Aloelujah</span>
-          <span style="font-family:'Great Vibes',cursive;font-size:13px;color:rgba(253,251,247,0.7);margin-top:1px;">by Danavara</span>
-        </div>
+    <div class="hidden lg:flex items-center gap-10">
+      <a class="nav-link" href="#story">Story</a>
+      <a class="nav-link" href="#rituale">Rituale</a>
+      <a class="nav-link" href="#mudita">Mudita Circle</a>
+      <a class="nav-link" href="#partner">Partner werden</a>
+      <a class="btn-deco btn-gold text-[.78rem]" href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener">
+        Ritual entdecken <span class="arrow">→</span>
       </a>
-
-      <!-- Desktop Nav Links -->
-      <div class="hidden md:flex items-center gap-6 lg:gap-8 text-sm" style="font-family:'Lora',serif;color:rgba(253,251,247,0.75);">
-        <a href="#story" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Story</a>
-        <a href="#rituals" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Rituale</a>
-        <a href="#mudita" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Mudita Circle</a>
-        <a href="#partner" class="hover:text-gold transition" style="color:rgba(253,251,247,0.75);">Partner werden</a>
-        <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener"
-           style="font-family:'Lora',serif;font-size:13px;font-weight:500;letter-spacing:1.8px;text-transform:uppercase;color:#1A3B32;background:#D4AF87;padding:11px 28px;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);transition:background 0.25s,transform 0.2s;display:inline-block;text-decoration:none;"
-           onmouseover="this.style.background='#FDFBF7';this.style.transform='translateY(-1px)'"
-           onmouseout="this.style.background='#D4AF87';this.style.transform='translateY(0)'">
-          Ritual entdecken
-        </a>
-      </div>
-
-      <!-- Mobile Burger -->
-      <button id="mobile-menu-btn" class="md:hidden text-3xl p-2" style="color:#D4AF87;" aria-label="Menü öffnen">☰</button>
     </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobile-menu" class="hidden md:hidden absolute top-full left-0 w-full py-6 px-6 shadow-xl" style="background:rgba(26,59,50,0.98);border-top:1px solid rgba(212,175,135,0.2);">
-      <div class="flex flex-col space-y-5 text-xl text-center" style="font-family:'Lora',serif;color:rgba(253,251,247,0.8);">
-        <a href="#story" class="hover:text-gold transition py-2">Story</a>
-        <a href="#rituals" class="hover:text-gold transition py-2">Rituale</a>
-        <a href="#mudita" class="hover:text-gold transition py-2">Mudita Circle</a>
-        <a href="#partner" class="hover:text-gold transition py-2">Partner werden</a>
-        <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener"
-           class="mt-4 inline-block mx-auto px-10 py-3 text-base"
-           style="background:#D4AF87;color:#1A3B32;font-weight:500;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%);">
-          Zum Shop
-        </a>
-        <button id="enable-notifications-mobile" class="hidden mt-4 mx-auto text-sm" style="border:1px solid rgba(212,175,135,0.5);color:rgba(253,251,247,0.7);padding:8px 24px;border-radius:40px;">🔔 Ritual-Erinnerungen</button>
-      </div>
-    </div>
-  </nav>
+    <button id="burger" class="lg:hidden txt-cream w-10 h-10 flex flex-col items-center justify-center gap-[5px]" aria-label="Menü öffnen">
+      <span class="block w-6 h-px bg-current"></span>
+      <span class="block w-6 h-px bg-current"></span>
+      <span class="block w-6 h-px bg-current"></span>
+    </button>
+  </div>
+</nav>
 
-  <!-- ===== HERO SECTION ===== -->
-  <header id="hero" role="banner" class="relative overflow-hidden" style="min-height:100svh;background-color:#1A3B32;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:120px 24px 100px;">
-
-    <!-- Atmosphärischer Hintergrund -->
-    <div aria-hidden="true" style="position:absolute;inset:0;pointer-events:none;overflow:hidden;">
-      <div style="position:absolute;top:-10%;left:50%;transform:translateX(-50%);width:70%;height:60%;background:radial-gradient(ellipse,rgba(212,175,135,0.11) 0%,transparent 65%);"></div>
-      <div style="position:absolute;bottom:10%;left:-5%;width:40%;height:50%;background:radial-gradient(ellipse,rgba(139,58,58,0.12) 0%,transparent 60%);"></div>
-      <div style="position:absolute;top:20%;right:-5%;width:35%;height:45%;background:radial-gradient(ellipse,rgba(212,175,135,0.07) 0%,transparent 60%);"></div>
-      <!-- Grain Textur -->
-      <div style="position:absolute;inset:0;opacity:0.035;background-image:url('data:image/svg+xml,%3Csvg viewBox=\'0 0 256 256\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'n\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.9\' numOctaves=\'4\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23n)\'/%3E%3C/svg%3E');background-size:256px 256px;"></div>
-    </div>
-
-    <!-- Art-Déco Ecken -->
-    <div aria-hidden="true" style="position:absolute;top:24px;left:24px;width:70px;height:70px;border-top:1px solid rgba(212,175,135,0.55);border-left:1px solid rgba(212,175,135,0.55);"></div>
-    <div aria-hidden="true" style="position:absolute;top:24px;right:24px;width:70px;height:70px;border-top:1px solid rgba(212,175,135,0.55);border-right:1px solid rgba(212,175,135,0.55);"></div>
-    <div aria-hidden="true" style="position:absolute;bottom:80px;left:24px;width:70px;height:70px;border-bottom:1px solid rgba(212,175,135,0.55);border-left:1px solid rgba(212,175,135,0.55);"></div>
-    <div aria-hidden="true" style="position:absolute;bottom:80px;right:24px;width:70px;height:70px;border-bottom:1px solid rgba(212,175,135,0.55);border-right:1px solid rgba(212,175,135,0.55);"></div>
-
-    <!-- Botanische Seitendekorationen -->
-    <svg aria-hidden="true" class="hero-botanical-left" style="position:absolute;top:50%;left:-30px;transform:translateY(-50%);width:180px;opacity:0.07;pointer-events:none;" viewBox="0 0 200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100 480 Q60 380 75 260 Q90 140 100 40" stroke="#D4AF87" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <path d="M100 380 Q40 340 28 270 Q16 200 55 175" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M88 320 Q130 285 110 230" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M100 270 Q38 240 25 185 Q12 130 52 108" stroke="#D4AF87" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <ellipse cx="100" cy="380" rx="32" ry="14" transform="rotate(-25 100 380)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
-      <ellipse cx="88" cy="305" rx="26" ry="11" transform="rotate(18 88 305)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
-      <ellipse cx="100" cy="240" rx="28" ry="12" transform="rotate(-12 100 240)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
-      <circle cx="55" cy="175" r="3" fill="#D4AF87" opacity="0.4"/>
-      <circle cx="130" cy="230" r="2" fill="#D4AF87" opacity="0.3"/>
-    </svg>
-    <svg aria-hidden="true" class="hero-botanical-right" style="position:absolute;top:50%;right:-30px;transform:translateY(-50%) scaleX(-1);width:180px;opacity:0.07;pointer-events:none;" viewBox="0 0 200 500" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <path d="M100 480 Q60 380 75 260 Q90 140 100 40" stroke="#D4AF87" stroke-width="2" fill="none" stroke-linecap="round"/>
-      <path d="M100 380 Q40 340 28 270 Q16 200 55 175" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M88 320 Q130 285 110 230" stroke="#D4AF87" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-      <path d="M100 270 Q38 240 25 185 Q12 130 52 108" stroke="#D4AF87" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-      <ellipse cx="100" cy="380" rx="32" ry="14" transform="rotate(-25 100 380)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
-      <ellipse cx="88" cy="305" rx="26" ry="11" transform="rotate(18 88 305)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
-      <ellipse cx="100" cy="240" rx="28" ry="12" transform="rotate(-12 100 240)" stroke="#D4AF87" stroke-width="1" fill="rgba(212,175,135,0.05)"/>
-      <circle cx="55" cy="175" r="3" fill="#D4AF87" opacity="0.4"/>
-      <circle cx="130" cy="230" r="2" fill="#D4AF87" opacity="0.3"/>
-    </svg>
-
-    <!-- Hero Inhalt -->
-    <div class="relative text-center" style="z-index:2;max-width:720px;display:flex;flex-direction:column;align-items:center;">
-
-      <!-- Ornament -->
-      <div aria-hidden="true" class="hero-reveal" style="display:flex;align-items:center;gap:10px;margin-bottom:18px;opacity:0;animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) forwards 0.15s;">
-        <div style="width:60px;height:1px;background:linear-gradient(to right,transparent,#D4AF87);"></div>
-        <div style="width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);opacity:0.6;"></div>
-        <div style="width:6px;height:6px;background:#D4AF87;transform:rotate(45deg);"></div>
-        <div style="width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);opacity:0.6;"></div>
-        <div style="width:60px;height:1px;background:linear-gradient(to left,transparent,#D4AF87);"></div>
-      </div>
-
-      <!-- Script Tagline -->
-      <p style="font-family:'Great Vibes',cursive;font-size:clamp(22px,4vw,30px);color:#D4AF87;letter-spacing:1px;margin-bottom:10px;line-height:1;opacity:0;animation:heroFadeUp 0.85s cubic-bezier(0.22,1,0.36,1) forwards 0.35s;">direkt aus Mallorca</p>
-
-      <!-- Hauptheadline -->
-      <div style="font-family:'Playfair Display',serif;font-weight:700;line-height:0.88;letter-spacing:-1px;margin-bottom:6px;">
-        <span style="display:block;font-size:clamp(68px,16vw,120px);font-style:italic;color:#D4AF87;opacity:0;animation:heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards 0.55s;">Aloe-</span>
-        <span style="display:block;font-size:clamp(68px,16vw,120px);color:#FDFBF7;letter-spacing:2px;opacity:0;animation:heroFadeUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards 0.65s;">lujah</span>
-      </div>
-
-      <!-- Gold Trennlinie -->
-      <div aria-hidden="true" style="width:100px;height:1px;background:linear-gradient(to right,transparent,#D4AF87,transparent);margin:22px auto;opacity:0;animation:heroFadeUp 0.7s ease forwards 0.85s;"></div>
-
-      <!-- Subheadline – führt mit Sehnsucht -->
-      <p style="font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,2.8vw,23px);color:rgba(253,251,247,0.75);line-height:1.65;max-width:500px;letter-spacing:0.2px;opacity:0;animation:heroFadeUp 0.8s ease forwards 1.0s;">
-        Du weißt, dass deine Haut mehr verdient als Kompromisse.<br>
-        Echte Bio-Aloe-Vera – geerntet, wo die Sonne brennt und die Zeit langsamer läuft.
-      </p>
-
-      <!-- Benefit Pills -->
-      <div role="list" aria-label="Produktvorteile" style="display:flex;flex-wrap:wrap;justify-content:center;gap:10px;margin-top:28px;opacity:0;animation:heroFadeUp 0.8s ease forwards 1.15s;">
-        <span role="listitem" style="display:flex;align-items:center;gap:8px;background:rgba(212,175,135,0.1);border:1px solid rgba(212,175,135,0.28);border-radius:100px;padding:8px 18px;font-family:'Lora',serif;font-size:12.5px;letter-spacing:0.6px;color:#D4AF87;"><span style="width:5px;height:5px;background:#D4AF87;border-radius:50%;flex-shrink:0;display:inline-block;"></span>100 % Bio-zertifiziert</span>
-        <span role="listitem" style="display:flex;align-items:center;gap:8px;background:rgba(212,175,135,0.1);border:1px solid rgba(212,175,135,0.28);border-radius:100px;padding:8px 18px;font-family:'Lora',serif;font-size:12.5px;letter-spacing:0.6px;color:#D4AF87;"><span style="width:5px;height:5px;background:#D4AF87;border-radius:50%;flex-shrink:0;display:inline-block;"></span>Direktvertrieb aus Mallorca</span>
-        <span role="listitem" style="display:flex;align-items:center;gap:8px;background:rgba(212,175,135,0.1);border:1px solid rgba(212,175,135,0.28);border-radius:100px;padding:8px 18px;font-family:'Lora',serif;font-size:12.5px;letter-spacing:0.6px;color:#D4AF87;"><span style="width:5px;height:5px;background:#D4AF87;border-radius:50%;flex-shrink:0;display:inline-block;"></span>Ohne Füllstoffe & Kompromisse</span>
-      </div>
-
-      <!-- CTA Gruppe -->
-      <div style="display:flex;flex-direction:column;align-items:center;gap:16px;margin-top:36px;opacity:0;animation:heroFadeUp 0.8s ease forwards 1.3s;">
-        <div style="display:flex;flex-wrap:wrap;gap:14px;justify-content:center;">
-          <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener"
-             style="font-family:'Lora',serif;font-size:14px;font-weight:500;letter-spacing:2px;text-transform:uppercase;color:#1A3B32;background:#D4AF87;border:none;padding:17px 44px;text-decoration:none;display:inline-block;clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);transition:background 0.28s,transform 0.22s;"
-             onmouseover="this.style.background='#FDFBF7';this.style.transform='translateY(-3px)'"
-             onmouseout="this.style.background='#D4AF87';this.style.transform='translateY(0)'">
-            Mein Ritual entdecken
-          </a>
-          <a href="#partner"
-             style="font-family:'Lora',serif;font-size:14px;font-weight:500;letter-spacing:1.5px;text-transform:uppercase;color:#D4AF87;background:transparent;border:1px solid rgba(212,175,135,0.5);padding:17px 32px;text-decoration:none;display:inline-block;clip-path:polygon(14px 0%,100% 0%,calc(100% - 14px) 100%,0% 100%);transition:all 0.28s;"
-             onmouseover="this.style.background='rgba(212,175,135,0.1)';this.style.borderColor='rgba(212,175,135,0.8)'"
-             onmouseout="this.style.background='transparent';this.style.borderColor='rgba(212,175,135,0.5)'">
-            15 % Provision → Partner werden
-          </a>
-        </div>
-
-        <!-- Sterne + Anzahl -->
-        <div style="display:flex;align-items:center;gap:10px;">
-          <div aria-label="5 von 5 Sternen" style="color:#D4AF87;font-size:15px;letter-spacing:2px;">★★★★★</div>
-          <span style="font-family:'Lora',serif;font-size:12px;color:rgba(253,251,247,0.5);letter-spacing:0.5px;">4,9/5 · Über 8.000 zufriedene Romantiker:innen</span>
-        </div>
-
-        <!-- Zertifikate -->
-        <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:16px;margin-top:4px;">
-          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">EU-Bio-zertifiziert</span>
-          <span style="color:rgba(212,175,135,0.3);">•</span>
-          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">Handgeerntet</span>
-          <span style="color:rgba(212,175,135,0.3);">•</span>
-          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">Vegan</span>
-          <span style="color:rgba(212,175,135,0.3);">•</span>
-          <span style="font-family:'Lora',serif;font-size:11px;color:rgba(253,251,247,0.5);letter-spacing:0.6px;">Ohne Mikroplastik</span>
-        </div>
-
-        <button id="enable-notifications" class="hidden" style="background:transparent;border:1px solid rgba(212,175,135,0.4);color:rgba(253,251,247,0.6);padding:10px 20px;border-radius:40px;font-family:'Lora',serif;font-size:13px;cursor:pointer;transition:all 0.3s;display:inline-flex;align-items:center;gap:8px;">🔔 Ritual-Erinnerungen erhalten</button>
-      </div>
-    </div>
-
-    <!-- Social Proof Bar -->
-    <div role="complementary" aria-label="Zertifizierungen" style="position:absolute;bottom:0;left:0;right:0;background:rgba(20,48,41,0.96);border-top:1px solid rgba(212,175,135,0.18);padding:14px 32px;display:flex;align-items:center;justify-content:center;flex-wrap:wrap;gap:0;opacity:0;animation:heroFadeUp 0.7s ease forwards 1.6s;">
-      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
-        <span style="color:#D4AF87;font-size:12px;">✦</span> COSMOS Organic zertifiziert
-      </div>
-      <div style="width:1px;height:22px;background:rgba(212,175,135,0.2);flex-shrink:0;"></div>
-      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
-        <span style="color:#D4AF87;font-size:12px;">✦</span> <strong style="color:#FDFBF7;font-weight:500;">95 %</strong>&nbsp;natürliche Inhaltsstoffe
-      </div>
-      <div style="width:1px;height:22px;background:rgba(212,175,135,0.2);flex-shrink:0;"></div>
-      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
-        <span style="color:#D4AF87;font-size:12px;">✦</span> 30 Tage Geld-zurück-Garantie
-      </div>
-      <div style="width:1px;height:22px;background:rgba(212,175,135,0.2);flex-shrink:0;"></div>
-      <div style="display:flex;align-items:center;gap:9px;padding:4px 24px;font-family:'Lora',serif;font-size:12px;letter-spacing:0.5px;color:rgba(253,251,247,0.55);white-space:nowrap;">
-        <span style="color:#D4AF87;font-size:12px;">✦</span> The Mudita Circle Community
-      </div>
-    </div>
-
-    <!-- Hero Animation Keyframes -->
-    <style>
-      @keyframes heroFadeUp {
-        from { opacity: 0; transform: translateY(22px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      /* Nav Scroll Effect */
-      .nav-scrolled {
-        background: rgba(26,59,50,0.97) !important;
-        backdrop-filter: blur(12px);
-        border-bottom: 1px solid rgba(212,175,135,0.15);
-        padding-top: 12px !important;
-        padding-bottom: 12px !important;
-      }
-      /* Botanik auf mobil ausblenden */
-      @media (max-width: 768px) {
-        .hero-botanical-left, .hero-botanical-right { display: none !important; }
-      }
-    </style>
-
-  </header>
-
-  <!-- ===== STORY SECTION ===== -->
-  <section id="story" class="py-12 md:py-20 lg:py-32 border-b border-gold/20 bg-vintage-pattern">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-      <!-- Mobile -->
-      <div class="lg:hidden space-y-8">
-        <div class="relative aspect-[3/4] rounded-[2rem] overflow-hidden art-deco-frame bg-charcoal">
-          <img src="https://images.unsplash.com/photo-1519222970733-f546218fa6d0?q=80&w=800" class="w-full h-full object-cover" alt="Vintage Wellness Mood" loading="lazy">
-          <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
-          <div class="absolute bottom-6 left-6 right-6 text-champagne">
-            <p class="font-script text-2xl sm:text-3xl mb-2 script-breath">Dear Modern Romantic,</p>
-            <p class="text-sm sm:text-base font-body">Manche Rituale sind zu schön, um sie in der Vergangenheit zu lassen… Wir bringen sie mit dir in die Zukunft.</p>
-          </div>
-        </div>
-        <div class="space-y-6">
-          <div class="deco-divider"><span class="deco-line"></span><span class="deco-diamond">◆</span><span class="deco-line"></span></div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl text-emerald leading-tight reveal">Die Weisheit früherer Generationen – neu verpackt für alle.</h2>
-          <p class="text-base sm:text-lg text-charcoal/80 leading-relaxed reveal font-body">Stell dir vor, du öffnest eine alte Schublade aus den 1950ern – und findest darin das zeitlose Geheimnis gepflegter Haut: pure Aloe Vera aus Mallorca.</p>
-          <p class="text-base sm:text-lg text-charcoal/80 leading-relaxed reveal font-body">Für Männer, für Frauen, für alle modernen Romantiker:innen, die echte Rituale wiederentdecken wollen.</p>
-          <div class="grid sm:grid-cols-2 gap-6 mt-8">
-            <div class="reveal"><h3 class="text-xl sm:text-2xl text-emerald mb-2">Damals: echt & einfach.</h3><p class="text-charcoal/80 text-sm sm:text-base font-body">Barbershops, Salons, Hausrituale… Pflege war gemeinschaftlich – und bedeutungsvoll.</p></div>
-            <div class="reveal"><h3 class="text-xl sm:text-2xl text-emerald mb-2">Heute: Vintage Soul, moderne Wissenschaft.</h3><p class="text-charcoal/80 text-sm sm:text-base font-body">Bio Aloe, zeitgemäße Formulierungen und Rituale für jedes Geschlecht.</p></div>
-          </div>
-          <div class="flex flex-wrap gap-2 sm:gap-3 reveal pt-4">
-            <span class="art-deco-badge">Cottagecore & Old Money</span><span class="art-deco-badge">Clean Beauty</span><span class="art-deco-badge">Rituale statt Routine</span>
-          </div>
-        </div>
-      </div>
-      <!-- Desktop Sticky -->
-      <div class="hidden lg:grid lg:grid-cols-2 gap-16">
-        <div class="sticky-child flex flex-col justify-center">
-          <div class="relative aspect-[3/4] rounded-[2rem] overflow-hidden art-deco-frame bg-charcoal">
-            <img src="https://images.unsplash.com/photo-1519222970733-f546218fa6d0?q=80&w=1200" class="w-full h-full object-cover" id="parallaxImage" alt="Vintage Wellness Mood" loading="lazy">
-            <div class="absolute inset-0 bg-gradient-to-t from-charcoal/70 via-transparent to-transparent"></div>
-            <div class="absolute bottom-6 left-6 right-6 text-champagne">
-              <p class="font-script text-3xl mb-2 script-breath reveal">Dear Modern Romantic,</p>
-              <p class="text-sm md:text-base reveal font-body" style="transition-delay: .15s;">Manche Rituale sind zu schön, um sie in der Vergangenheit zu lassen… Wir bringen sie mit dir in die Zukunft.</p>
-            </div>
-          </div>
-        </div>
-        <div class="space-y-10 mt-16 lg:mt-0">
-          <div class="deco-divider"><span class="deco-line"></span><span class="deco-diamond">◆</span><span class="deco-line"></span></div>
-          <h2 class="text-3xl md:text-5xl text-emerald leading-tight reveal">Die Weisheit früherer Generationen – neu verpackt für alle.</h2>
-          <p class="text-lg md:text-xl text-charcoal/80 leading-relaxed reveal font-body" style="transition-delay: .15s;">Stell dir vor, du öffnest eine alte Schublade aus den 1950ern – und findest darin das zeitlose Geheimnis gepflegter Haut: pure Aloe Vera aus Mallorca.</p>
-          <p class="text-lg md:text-xl text-charcoal/80 leading-relaxed reveal font-body" style="transition-delay: .25s;">Für Männer, für Frauen, für alle modernen Romantiker:innen, die echte Rituale wiederentdecken wollen.</p>
-          <div class="grid md:grid-cols-2 gap-8 mt-10">
-            <div class="reveal" style="transition-delay: .35s;"><h3 class="text-2xl text-emerald mb-2">Damals: echt & einfach.</h3><p class="text-charcoal/80 font-body">Barbershops, Salons, Hausrituale… Pflege war gemeinschaftlich – und bedeutungsvoll.</p></div>
-            <div class="reveal" style="transition-delay: .45s;"><h3 class="text-2xl text-emerald mb-2">Heute: Vintage Soul, moderne Wissenschaft.</h3><p class="text-charcoal/80 font-body">Bio Aloe, zeitgemäße Formulierungen und Rituale für jedes Geschlecht.</p></div>
-          </div>
-          <div class="inline-flex flex-wrap gap-3 reveal" style="transition-delay: .55s;">
-            <span class="art-deco-badge">Cottagecore & Old Money</span><span class="art-deco-badge">Clean Beauty</span><span class="art-deco-badge">Rituale statt Routine</span>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- Quote Card -->
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pb-8 mt-12 md:mt-16">
-      <div class="bg-charcoal text-champagne art-deco-frame p-6 sm:p-8 max-w-xl mx-auto reveal shadow-2xl" style="transition-delay: .65s; border-left: 4px solid var(--gold);">
-        <div class="heraldic-ornament mb-3"><span>❦</span></div>
-        <p class="section-label text-center mb-3 text-gold">Notizen aus der Zeit</p>
-        <p class="quote-text text-center text-champagne">„Selfcare ist kein Luxus. Es ist die Kunst, sich selbst Zeit zu schenken – jeden Tag.“</p>
-        <p class="mt-4 text-xs text-gold/70 text-center tracking-wider">– Aus dem Aloelujah Journal</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TIMELINE ===== -->
-  <section class="py-12 md:py-20 border-y border-gold/20 bg-vintage-cream">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8">
-      <div class="text-center mb-8 md:mb-12">
-        <div class="heraldic-ornament mb-4"><span>◆</span><span>❦</span><span>◆</span></div>
-        <p class="section-label mb-2">1920 – 1950 – Heute</p>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl text-emerald mb-3">Was bleibt, wenn Trends vergehen.</h2>
-        <p class="text-sm sm:text-base md:text-lg text-charcoal/80 max-w-2xl mx-auto font-body">Drei Epochen, eine Konstante: Wunsch nach echten Momenten, ehrlichen Berührungen und gepflegter Haut.</p>
-      </div>
-      <div class="md:hidden space-y-6">
-        <div class="art-deco-frame p-6 reveal"><p class="section-label mb-2">1920er</p><h3 class="text-xl text-emerald mb-2">Rasierstuhl & Puderduft</h3><p class="text-sm text-charcoal/80 font-body">Barbershops, Puderdosen – Pflege als Handwerk und Ritual.</p></div>
-        <div class="art-deco-frame p-6 reveal"><p class="section-label mb-2">1950er</p><h3 class="text-xl text-emerald mb-2">Wohnzimmer-Konzerte & Abendbäder</h3><p class="text-sm text-charcoal/80 font-body">Jazz, Abendbäder, gemeinsame Rituale – Pflege als Moment des Teilens.</p></div>
-        <div class="art-deco-frame p-6 reveal"><p class="section-label mb-2">Heute</p><h3 class="text-xl text-emerald mb-2">Aloelujah – für alle modernen Romantiker:innen</h3><p class="text-sm text-charcoal/80 font-body">Ob im Anzug, im Blumenkleid oder Hoodie – echte Rituale für heutige Leben.</p></div>
-      </div>
-      <div class="hidden md:block relative">
-        <div class="absolute left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-transparent via-gold to-transparent transform -translate-x-1/2"></div>
-        <div class="space-y-12">
-          <div class="relative flex items-center gap-8">
-            <div class="w-1/2 text-right"><p class="section-label mb-1">1920er</p><h3 class="text-xl text-emerald mb-2">Rasierstuhl & Puderduft</h3><p class="text-sm md:text-base text-charcoal/80 font-body">Barbershops, Puderdosen – Pflege als Handwerk und Ritual.</p></div>
-            <div class="flex flex-col items-center w-0"><div class="timeline-diamond"></div></div>
-            <div class="w-1/2"></div>
-          </div>
-          <div class="relative flex items-center gap-8">
-            <div class="w-1/2"></div>
-            <div class="flex flex-col items-center w-0"><div class="timeline-diamond"></div></div>
-            <div class="w-1/2"><p class="section-label mb-1">1950er</p><h3 class="text-xl text-emerald mb-2">Wohnzimmer-Konzerte & Abendbäder</h3><p class="text-sm md:text-base text-charcoal/80 font-body">Jazz, Abendbäder, gemeinsame Rituale – Pflege als Moment des Teilens.</p></div>
-          </div>
-          <div class="relative flex items-center gap-8">
-            <div class="w-1/2 text-right"><p class="section-label mb-1">Heute</p><h3 class="text-xl text-emerald mb-2">Aloelujah – für alle modernen Romantiker:innen</h3><p class="text-sm md:text-base text-charcoal/80 font-body">Ob im Anzug, im Blumenkleid oder Hoodie – echte Rituale für heutige Leben.</p></div>
-            <div class="flex flex-col items-center w-0"><div class="timeline-diamond"></div></div>
-            <div class="w-1/2"></div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== INGREDIENTS ===== -->
-  <section class="py-16 md:py-28 bg-british-green text-champagne">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8 grid md:grid-cols-2 gap-8 md:gap-12 items-center">
-      <div class="space-y-4 sm:space-y-5 reveal">
-        <div class="deco-divider mb-4 justify-start ml-0"><span class="deco-line"></span><span class="deco-diamond">◆</span><span class="deco-line"></span></div>
-        <h2 class="text-2xl sm:text-3xl md:text-4xl text-gold">So klar wie ein handgeschriebener Brief.</h2>
-        <p class="text-sm sm:text-base md:text-lg text-champagne/90 font-body">Wir glauben, dass du wissen solltest, was auf deine Haut kommt – so klar und ehrlich wie die Worte in einem alten Liebesbrief.</p>
-        <ul class="space-y-2 text-sm md:text-base text-champagne/90 font-body">
-          <li>• <strong class="text-gold">Bio Aloe Vera aus Mallorca</strong> als Hauptinhaltsstoff</li>
-          <li>• Frei von <strong class="text-gold">Mikroplastik, Mineralöl & aggressiven Sulfaten</strong></li>
-          <li>• Ohne unnötige Duftstoffe – sanft für sensible Haut</li>
-          <li>• <strong class="text-gold">Vegan</strong> & tierversuchsfrei</li>
-        </ul>
-        <p class="text-xs sm:text-sm text-champagne/60 font-body italic">Jede Charge ist wie eine kleine Edition – sorgfältig produziert.</p>
-      </div>
-      <div class="relative reveal">
-        <div class="art-deco-frame bg-vintage-cream p-6 sm:p-8">
-          <p class="section-label mb-3">Hero-Inhaltsstoff</p>
-          <h3 class="text-xl sm:text-2xl text-emerald mb-2">Aloe Barbadensis Miller</h3>
-          <p class="text-sm md:text-base text-charcoal/80 mb-4 font-body">Unsere Aloe stammt aus kontrolliert biologischem Anbau auf Mallorca. Sie wird von Hand geerntet und schonend verarbeitet.</p>
-          <div class="flex flex-wrap gap-2 text-xs"><span class="px-3 py-1 rounded-full bg-british-green/10 text-charcoal/80 border border-gold/30">beruhigend</span><span class="px-3 py-1 rounded-full bg-british-green/10 text-charcoal/80 border border-gold/30">feuchtigkeitsspendend</span><span class="px-3 py-1 rounded-full bg-british-green/10 text-charcoal/80 border border-gold/30">regenerierend</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== RITUAL CLOCK ===== -->
-  <section id="rituals" class="py-16 md:py-28 bg-blush">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-      <div class="text-center mb-8 md:mb-12 reveal">
-        <h2 class="text-2xl sm:text-3xl md:text-5xl font-canela text-emerald mb-3">Dein Tag, dein Aloe-Ritual</h2>
-        <p class="text-sm sm:text-base md:text-lg text-charcoal/80 max-w-2xl mx-auto">Stell dir deinen Alltag wie ein altes Ziffernblatt vor – deine Aloe-Rituale begleiten dich durch den Tag.</p>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-        <article class="bg-white/80 rounded-3xl p-5 sm:p-6 shadow-xl reveal transform hover:-translate-y-1 hover:shadow-2xl transition"><p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">MORGEN · 07:00</p><h3 class="text-lg sm:text-xl font-serif text-emerald mb-2">Slow Morning Glow</h3><p class="text-sm md:text-base text-charcoal/80 mb-3">Nach dem Aufstehen ein paar Tropfen Aloe-Gel auf die feuchte Haut, tief durchatmen, die ersten Sonnenstrahlen einfangen.</p><a href="#collection" class="text-sm text-emerald underline underline-offset-4 decoration-gold/70 hover:text-gold">Passendes Produkt ansehen →</a></article>
-        <article class="art-deco-frame p-5 sm:p-6 text-center reveal transform hover:-translate-y-1 hover:shadow-2xl transition"><p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">NACHMITTAG · 15:00</p><h3 class="text-lg sm:text-xl font-serif text-emerald mb-2">Handwritten Pause</h3><p class="text-sm md:text-base text-charcoal/80 mb-3">Eine Tasse Tee, Velvet Hand Balm und ein kurzer Blick in dein Journal.</p><a href="https://aloe-lujah.mivita.care/produkte/koerperpflege/hand-fusscreme-naturkosmetik" class="text-sm text-emerald underline underline-offset-4 decoration-gold/70 hover:text-gold">Velvet Hand Balm →</a></article>
-        <article class="bg-white/80 rounded-3xl p-5 sm:p-6 shadow-xl reveal transform hover:-translate-y-1 hover:shadow-2xl transition sm:col-span-2 md:col-span-1"><p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">ABEND · 21:00</p><h3 class="text-lg sm:text-xl font-serif text-emerald mb-2">Golden Hour for You</h3><p class="text-sm md:text-base text-charcoal/80 mb-3">Nach der Dusche ein paar Tropfen Golden Hour Body Oil – und ein langsamer Tanz nur für dich.</p><a href="https://aloe-lujah.mivita.care/produkte/koerperpflege/bodylotion" class="text-sm text-emerald underline underline-offset-4 decoration-gold/70 hover:text-gold">Golden Hour Body Oil →</a></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== JOURNAL TEASER ===== -->
-  <section class="py-16 md:py-28 bg-champagne">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-      <div class="text-center mb-8 md:mb-10 reveal"><p class="text-xs uppercase tracking-[0.35em] text-charcoal/60 mb-2">Aloelujah Journal</p><h2 class="text-2xl sm:text-3xl md:text-4xl font-canela text-emerald mb-3">Worte für sensible Herzen</h2><p class="text-sm sm:text-base md:text-lg text-charcoal/80 max-w-2xl mx-auto">Kleine Essays, inspiriert von alten Zeiten – über Haut, Rituale und die Kunst, sich selbst nicht zu vergessen.</p></div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-        <article class="bg-white/80 rounded-3xl p-5 sm:p-6 shadow-xl reveal"><p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">Lesen · 5 Min.</p><h3 class="text-base sm:text-lg md:text-xl font-serif text-emerald mb-2">Warum sensible Haut Ruhe braucht.</h3><p class="text-sm text-charcoal/80 mb-3">Ein Brief an alle, die schon alles ausprobiert haben.</p><a href="#" class="text-sm text-emerald underline underline-offset-4 decoration-gold/70 hover:text-gold">Bald lesen →</a></article>
-        <article class="bg-white/80 rounded-3xl p-5 sm:p-6 shadow-xl reveal"><p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">Lesen · 4 Min.</p><h3 class="text-base sm:text-lg md:text-xl font-serif text-emerald mb-2">3 Wege zu deinem 1950s-Moment.</h3><p class="text-sm text-charcoal/80 mb-3">Vom Licht über die Musik bis zu deinem Aloe-Ritual.</p><a href="#" class="text-sm text-emerald underline underline-offset-4 decoration-gold/70 hover:text-gold">Bald lesen →</a></article>
-        <article class="bg-white/80 rounded-3xl p-5 sm:p-6 shadow-xl reveal sm:col-span-2 md:col-span-1"><p class="text-xs uppercase tracking-[0.25em] text-gold mb-2">Lesen · 6 Min.</p><h3 class="text-base sm:text-lg md:text-xl font-serif text-emerald mb-2">Der Salon als Business.</h3><p class="text-sm text-charcoal/80 mb-3">Wie eine neue Generation sich Einkommen im Stil eines alten Salons aufbaut.</p><a href="#" class="text-sm text-emerald underline underline-offset-4 decoration-gold/70 hover:text-gold">Bald lesen →</a></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== BEFORE/AFTER SLIDER ===== -->
-  <section class="py-16 md:py-24 bg-gold-gradient text-champagne text-center">
-    <div class="max-w-5xl mx-auto px-4">
-      <h2 class="text-3xl sm:text-4xl md:text-6xl font-canela text-emerald mb-6 md:mb-12">Schiebe die Zeit…</h2>
-      <div class="relative h-80 sm:h-96 md:h-[550px] overflow-hidden rounded-3xl shadow-2xl border-2 border-gold/50" id="before-after">
-        <img src="https://images.unsplash.com/photo-1583511655857-d19b40a7a54e?w=1200&q=80" alt="1955 Vintage Pflege" class="absolute inset-0 w-full h-full object-cover">
-        <div id="after-image" class="absolute inset-0 overflow-hidden" style="clip-path: inset(0 50% 0 0);"><img src="https://images.unsplash.com/photo-1594736797933-d0501ba2fe65?w=1200&q=80" alt="Heute mit Aloelujah" class="w-full h-full object-cover"></div>
-        <div id="slider-divider" class="absolute top-0 bottom-0 w-1 bg-white shadow-xl flex items-center justify-center cursor-col-resize z-10 touch-none" style="left: 50%; transform: translateX(-50%);"><div class="w-10 h-10 bg-gold rounded-full flex items-center justify-center shadow-md text-british-green text-xl font-bold">↔</div></div>
-      </div>
-      <p class="mt-4 sm:mt-6 text-xs sm:text-sm text-charcoal/70 font-body">Ziehe den Schieber – sieh den Unterschied zwischen damals und heute</p>
-    </div>
-  </section>
-
-  <!-- ===== QUIZ SECTION (Kontrast Deep Sapphire) ===== -->
-  <section id="quiz" class="py-16 md:py-28 bg-deep-sapphire text-champagne border-y border-gold/30">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-      <div class="heraldic-ornament mb-4"><span>◆</span><span>❦</span><span>◆</span></div>
-      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-canela text-gold mb-6 md:mb-8 reveal">Welche Romantikerin lebt in dir?</h2>
-      <p class="text-base sm:text-lg md:text-xl mb-8 md:mb-10 text-champagne/80 reveal">Beantworte 4 Fragen und erhalte dein persönliches Aloe-Ritual.</p>
-      <div class="ja-strasse-container max-w-lg mx-auto mb-8 reveal" style="background: #FFFFFF; border: 1px solid var(--gold); box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-        <p class="font-serif text-emerald mb-4 text-left font-bold" style="color: #0A3D3A;">Bevor wir starten – drei kleine Fragen an dich:</p>
-        <div class="ja-step" id="ja-step-1"><span class="check" style="background: var(--emerald); border-color: var(--emerald); color: white;">1</span><p style="color: #1A1A1A; font-weight: 500;">Wünschst du dir mehr echte Rituale im Alltag?</p></div>
-        <div class="ja-step" id="ja-step-2"><span class="check" style="background: var(--emerald); border-color: var(--emerald); color: white;">2</span><p style="color: #1A1A1A; font-weight: 500;">Möchtest du Produkte, die wirklich wirken?</p></div>
-        <div class="ja-step" id="ja-step-3"><span class="check" style="background: var(--emerald); border-color: var(--emerald); color: white;">3</span><p style="color: #1A1A1A; font-weight: 500;">Willst du Teil einer echten Community sein?</p></div>
-        <div class="flex gap-3 justify-center mt-6"><button id="ja-strasse-ja" class="art-deco-btn bg-gold text-charcoal px-8 py-3 font-medium hover:bg-emerald hover:text-white transition" style="font-weight: 600;">Ja, das bin ich →</button></div>
-      </div>
-      <div class="flex items-center justify-center gap-3 mb-6 md:mb-8 reveal"><div class="quiz-step-dot active w-3 h-3 rounded-full bg-gold"></div><div class="quiz-step-dot w-3 h-3 rounded-full bg-gold/40"></div><div class="quiz-step-dot w-3 h-3 rounded-full bg-gold/40"></div><div class="quiz-step-dot w-3 h-3 rounded-full bg-gold/40"></div></div>
-      <div id="quiz-container" class="art-deco-frame bg-white/95 p-6 sm:p-8 md:p-12 shadow-xl reveal">
-        <div id="quiz-question" class="text-xl sm:text-2xl md:text-3xl font-serif text-charcoal mb-6 md:mb-8"></div>
-        <div id="quiz-answers" class="grid sm:grid-cols-2 gap-3 sm:gap-4"></div>
-        <div class="flex items-center justify-between mt-8 md:mt-10"><button id="quiz-prev" class="text-sm md:text-base text-charcoal/70 hover:text-gold transition disabled:opacity-40">← Zurück</button><button id="quiz-next" class="art-deco-btn bg-gold text-deep-sapphire px-8 sm:px-10 py-3 sm:py-4 text-sm sm:text-base font-medium hover:bg-emerald hover:text-champagne transition">Weiter →</button></div>
-      </div>
-      <div id="quiz-result" class="hidden mt-8 md:mt-12 reveal">
-        <h3 class="text-2xl sm:text-3xl md:text-4xl font-serif mb-3 sm:mb-4 text-gold" id="quiz-result-title"></h3>
-        <p class="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-champagne/80" id="quiz-result-desc"></p>
-        <div class="art-deco-frame bg-white/90 p-6 sm:p-8 text-left">
-          <h4 class="text-xl sm:text-2xl font-serif mb-4 text-emerald">Dein persönliches Aloe-Ritual</h4>
-          <ul class="list-disc list-inside space-y-2 text-sm sm:text-base md:text-lg mb-6 sm:mb-8 text-charcoal/80" id="quiz-result-ritual"></ul>
-          <div class="flex flex-col lg:flex-row gap-4 sm:gap-6 items-start lg:items-center justify-between">
-            <div><p class="text-xs uppercase tracking-widest text-gold mb-1">Empfohlenes Produkt</p><p class="font-serif text-xl sm:text-2xl text-emerald" id="quiz-result-product"></p></div>
-            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 w-full lg:w-auto">
-              <a id="quiz-shop-link" href="https://aloe-lujah.mivita.care" class="btn-ink art-deco-btn bg-gold text-deep-sapphire px-6 sm:px-10 py-3 sm:py-4 text-sm sm:text-base hover:bg-emerald hover:text-champagne transition text-center">Zum Produkt →</a>
-              <button id="quiz-lead-open" class="art-deco-btn-outline border-2 border-gold text-charcoal px-6 sm:px-10 py-3 sm:py-4 text-sm sm:text-base hover:bg-gold hover:text-deep-sapphire transition text-center">Ritual per E-Mail erhalten</button>
-            </div>
-          </div>
-          <div class="mt-6 pt-6 border-t border-gold/20 text-center"><p class="text-sm text-charcoal/70 mb-3">🎁 Dein Ritual als PDF für später:</p><button id="download-ritual-pdf" class="text-emerald underline underline-offset-4 hover:text-gold transition text-sm">📄 PDF herunterladen</button></div>
-        </div>
-      </div>
-      <div id="quiz-lead-overlay" class="hidden fixed inset-0 z-50 bg-charcoal/80 flex items-center justify-center px-4">
-        <div class="bg-champagne text-charcoal max-w-md w-full rounded-3xl p-6 sm:p-8 relative">
-          <button id="quiz-lead-close" class="absolute right-4 sm:right-6 top-4 sm:top-6 text-2xl text-charcoal/60 hover:text-charcoal">✕</button>
-          <h3 class="text-xl sm:text-2xl font-serif mb-4">Dein Ritual per E-Mail</h3>
-          <p class="mb-6 text-sm">Erhalte dein persönliches Ritual, Vintage-Tipps und exklusive Drops.</p>
-          <form id="quiz-lead-form" class="space-y-4"><input type="text" name="name" placeholder="Dein Name" class="w-full border border-charcoal/30 rounded-full px-5 py-3"><input type="email" name="email" placeholder="deine@email.de" required class="w-full border border-charcoal/30 rounded-full px-5 py-3"><button type="submit" class="w-full art-deco-btn bg-emerald text-champagne py-3 font-medium hover:bg-gold">Ritual zusenden →</button></form>
-          <p class="text-xs text-center mt-5 text-charcoal/60">Jederzeit abmelden. Nur schöne Inhalte.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== TRUST & TESTIMONIALS ===== -->
-  <section class="py-16 md:py-28 bg-vintage-pattern border-b border-gold/10">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 md:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-6 md:gap-8 mb-10 md:mb-14">
-        <div class="reveal"><div class="deco-divider mb-4 justify-start"><span class="deco-line"></span><span class="deco-diamond">◆</span><span class="deco-line"></span></div><h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-canela text-emerald mb-3 sm:mb-4">Über 8.000 glückliche Romantiker:innen</h2><p class="text-sm sm:text-base md:text-lg text-charcoal/80 max-w-xl">Menschen, die sanfte, ehrliche Pflege lieben.</p></div>
-        <div class="flex items-center gap-3 sm:gap-4 reveal"><div class="text-2xl sm:text-3xl text-gold tracking-widest">★★★★★</div><p class="text-xs sm:text-sm md:text-base text-charcoal/70">4,9 / 5 Sterne aus verifizierten Bewertungen</p></div>
-      </div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-10">
-        <article class="art-deco-frame p-5 sm:p-6 md:p-8 text-left reveal"><div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=1" alt="Clara B." class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mr-3 object-cover border-2 border-gold"><div><p class="font-bold text-base sm:text-lg text-emerald">Clara B.</p><div class="text-gold flex">★★★★★</div></div></div><p class="text-charcoal/80 text-sm md:text-base italic">„Ich habe noch nie eine Hautpflege erlebt, die sich so luxuriös und ehrlich anfühlt.“</p></article>
-        <article class="art-deco-frame p-5 sm:p-6 md:p-8 text-left reveal"><div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=5" alt="Sophie L." class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mr-3 object-cover border-2 border-gold"><div><p class="font-bold text-base sm:text-lg text-emerald">Sophie L.</p><div class="text-gold flex">★★★★★</div></div></div><p class="text-charcoal/80 text-sm md:text-base italic">„Endlich Produkte, die wirken und aussehen wie im Bad meiner Großmutter.“</p></article>
-        <article class="art-deco-frame p-5 sm:p-6 md:p-8 text-left reveal sm:col-span-2 md:col-span-1"><div class="flex items-center mb-4"><img src="https://i.pravatar.cc/150?img=8" alt="Elena M." class="w-12 h-12 sm:w-14 sm:h-14 rounded-full mr-3 object-cover border-2 border-gold"><div><p class="font-bold text-base sm:text-lg text-emerald">Elena M.</p><div class="text-gold flex">★★★★★</div></div></div><p class="text-charcoal/80 text-sm md:text-base italic">„Meine Haut war immer empfindlich. Seit Aloelujah ist sie ruhig und strahlend.“</p></article>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== AS SEEN IN ===== -->
-  <section class="py-8 md:py-16 bg-champagne-dark/30">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 md:px-8 text-center">
-      <p class="text-xs uppercase tracking-[0.35em] text-charcoal/60 mb-4">As seen in (bald)</p>
-      <div class="flex flex-wrap items-center justify-center gap-3 sm:gap-6 opacity-80"><div class="text-xs sm:text-sm md:text-base font-serif border border-charcoal/20 rounded-full px-3 py-1.5">Vintage Beauty Blogs</div><div class="text-xs sm:text-sm md:text-base font-serif border border-charcoal/20 rounded-full px-3 py-1.5">Slow Living Magazine</div><div class="text-xs sm:text-sm md:text-base font-serif border border-charcoal/20 rounded-full px-3 py-1.5">Clean Beauty Podcast</div></div>
-    </div>
-  </section>
-
-  <!-- ===== THE MUDITA CIRCLE ===== -->
-  <section id="mudita" class="py-16 md:py-24 bg-emerald text-champagne">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-      <div class="flex flex-col md:flex-row items-start md:items-end justify-between gap-6 md:gap-8 mb-8 md:mb-10">
-        <div class="reveal">
-          <div class="heraldic-ornament mb-4 justify-start"><span>◆</span><span>❦</span><span>◆</span></div>
-          <h2 class="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-canela text-gold mb-3">The Mudita Circle</h2>
-          <p class="text-sm sm:text-base md:text-lg text-champagne/80 max-w-md">Gemeinsam wachsen. Echte Rituale teilen. Ein Kreis, der von Mitfreude lebt.</p>
-        </div>
-        <a href="#quiz" class="reveal inline-flex items-center gap-2 text-sm md:text-base border border-gold/60 px-5 py-2.5 rounded-full hover:bg-gold hover:text-charcoal transition"><span>✨</span> Dem Circle beitreten →</a>
-      </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-2 md:gap-3 reveal">
-        <div class="aspect-square bg-gold/10 rounded-xl flex items-center justify-center text-gold text-3xl">🌿</div>
-        <div class="aspect-square bg-gold/10 rounded-xl flex items-center justify-center text-gold text-3xl">✨</div>
-        <div class="aspect-square bg-gold/10 rounded-xl flex items-center justify-center text-gold text-3xl">🕯️</div>
-        <div class="aspect-square bg-gold/10 rounded-xl flex items-center justify-center text-gold text-3xl">📝</div>
-        <div class="aspect-square bg-gold/10 rounded-xl flex items-center justify-center text-gold text-3xl">🌙</div>
-        <div class="aspect-square bg-gold/10 rounded-xl flex items-center justify-center text-gold text-3xl">❤️</div>
-      </div>
-      <div class="text-center mt-8 md:mt-10 reveal">
-        <p class="text-champagne/70 text-sm mb-4 font-script text-xl">Teile deine Mitfreude mit uns</p>
-        <a href="https://instagram.com/aloelujah" target="_blank" rel="noopener" class="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-gold/40 text-champagne px-6 sm:px-8 py-3 rounded-full text-sm hover:bg-gold hover:text-charcoal transition"><span>🌿</span> #MuditaCircle <span>→</span></a>
-        <p class="text-xs text-champagne/50 mt-4">Wir feiern deinen Erfolg mit dir</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PARTNER SUCCESS STORIES ===== -->
-  <section class="py-16 md:py-28 bg-vintage-cream border-t border-gold/20">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 md:px-8">
-      <div class="text-center mb-8 md:mb-12 reveal"><div class="heraldic-ornament mb-4"><span>◆</span><span>❦</span><span>◆</span></div><p class="text-xs uppercase tracking-[0.35em] text-gold mb-2">Erfolgsgeschichten</p><h2 class="text-2xl sm:text-3xl md:text-4xl font-canela text-emerald mb-3">Sie haben es geschafft</h2><p class="text-sm sm:text-base md:text-lg text-charcoal/80 max-w-2xl mx-auto">Echte Partner:innen, die mit Aloelujah ihr eigenes zeitloses Business aufgebaut haben.</p></div>
-      <div class="grid sm:grid-cols-2 md:grid-cols-3 gap-5 sm:gap-6 md:gap-8">
-        <div class="art-deco-frame p-5 sm:p-6 md:p-8 reveal"><div class="flex items-center gap-3 mb-4"><img src="https://i.pravatar.cc/150?img=12" alt="Anna M." class="w-14 h-14 rounded-2xl object-cover border-2 border-gold"><div><p class="font-semibold text-emerald">Anna M., München</p><p class="text-xs text-charcoal/60">Seit 4 Monaten Partnerin</p></div></div><p class="text-charcoal/80 italic mb-3">„Ich verdiene über 1.800 € im Monat – neben meinem Job.“</p><p class="text-gold text-sm font-bold">+ 2.340 € Provision im letzten Monat</p></div>
-        <div class="art-deco-frame p-5 sm:p-6 md:p-8 reveal"><div class="flex items-center gap-3 mb-4"><img src="https://i.pravatar.cc/150?img=15" alt="Lukas Berger" class="w-14 h-14 rounded-2xl object-cover border-2 border-gold"><div><p class="font-semibold text-emerald">Lukas Berger, Hamburg</p><p class="text-xs text-charcoal/60">Seit 7 Monaten Partner</p></div></div><p class="text-charcoal/80 italic mb-3">„Heute habe ich ein Team und verdiene vierstellig.“</p><p class="text-gold text-sm font-bold">+ 4.120 € Provision im letzten Monat</p></div>
-        <div class="art-deco-frame p-5 sm:p-6 md:p-8 reveal sm:col-span-2 md:col-span-1"><div class="flex items-center gap-3 mb-4"><img src="https://i.pravatar.cc/150?img=20" alt="Sophie Keller" class="w-14 h-14 rounded-2xl object-cover border-2 border-gold"><div><p class="font-semibold text-emerald">Sophie Keller, Berlin</p><p class="text-xs text-charcoal/60">Seit 11 Monaten Partnerin</p></div></div><p class="text-charcoal/80 italic mb-3">„Das Beste ist die Community – wie ein echter 1950er Salon.“</p><p class="text-gold text-sm font-bold">+ 6.850 € Provision im letzten Monat</p></div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== LONGEVITY ===== -->
-  <section class="py-16 md:py-28 bg-deep-sapphire text-champagne border-y border-gold/30">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 text-center">
-      <div class="heraldic-ornament mb-4"><span>◆</span><span>❦</span><span>◆</span></div>
-      <h2 class="text-2xl sm:text-3xl md:text-4xl font-canela text-gold mb-4 sm:mb-6 reveal">Zeitlose Schönheit beginnt von innen</h2>
-      <p class="text-base sm:text-lg md:text-xl text-champagne/80 max-w-2xl mx-auto reveal">Aloe Vera ist nicht nur Pflege – sie ist ein Ritual der Langlebigkeit. Seit Jahrhunderten wird sie für Regeneration, innere Balance und äußere Strahlkraft verwendet.</p>
-      <div class="mt-8 sm:mt-12 grid sm:grid-cols-2 gap-5 sm:gap-8 max-w-2xl mx-auto">
-        <div class="art-deco-frame bg-vintage-cream/10 p-6 sm:p-8 reveal">
-          <p class="text-xl sm:text-2xl font-serif text-gold mb-3">Von außen</p>
-          <p class="text-sm sm:text-base text-champagne/90">Beruhigung, Feuchtigkeit und sichtbare Regeneration durch reine Bio-Aloe aus Mallorca.</p>
-        </div>
-        <div class="art-deco-frame bg-vintage-cream/10 p-6 sm:p-8 reveal">
-          <p class="text-xl sm:text-2xl font-serif text-gold mb-3">Von innen</p>
-          <p class="text-sm sm:text-base text-champagne/90">Die tägliche Ritual-Praxis fördert Achtsamkeit und langfristiges Wohlbefinden.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== PARTNER SECTION ===== -->
-  <section id="partner" class="partner-cta py-16 md:py-24 lg:py-32">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 text-center">
-      <h2 class="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-canela text-emerald mb-4 sm:mb-6 reveal">Werde Teil des Aloelujah Erbes</h2>
-      <p class="text-xl sm:text-2xl md:text-3xl text-charcoal/80 mb-5 sm:mb-6">Verdiene <span class="font-bold text-gold">15 % recurring Provision</span> – monatlich, nachhaltig, stilvoll.</p>
-      <div class="grid sm:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-10 sm:mb-16"><div class="bg-white/90 rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl reveal"><p class="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald mb-2">€1.247</p><p class="text-sm sm:text-base md:text-xl">Durchschnitt im 3. Monat</p></div><div class="bg-white/90 rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl reveal"><p class="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald mb-2">€8.300</p><p class="text-sm sm:text-base md:text-xl">Top-Verdiener letzter Monat</p></div><div class="bg-white/90 rounded-3xl p-5 sm:p-8 md:p-10 shadow-xl reveal"><p class="text-4xl sm:text-5xl md:text-6xl font-bold text-emerald mb-2">97 %</p><p class="text-sm sm:text-base md:text-xl">Zufriedene Partner:innen</p></div></div>
-      <a href="https://mivita.care/registrierung" target="_blank" rel="noopener" class="btn-ink inline-block bg-emerald text-champagne px-8 sm:px-12 md:px-16 py-4 sm:py-6 md:py-8 rounded-3xl text-xl sm:text-2xl md:text-3xl font-medium hover:bg-gold transition shadow-2xl mb-4 sm:mb-6">Jetzt kostenlos Partner:in werden →</a>
-      <p class="text-base sm:text-lg text-charcoal/70 mb-6 sm:mb-8">Begrenzte Plätze – nur noch <span class="font-bold text-emerald">47 Plätze frei</span></p>
-      <a href="https://chat.whatsapp.com/LAjSAF288MYJ47gh2dXr0b?mode=wwt" target="_blank" rel="noopener" class="text-gold underline underline-offset-4 hover:text-emerald transition">Kostenloses Kennenlerngespräch vereinbaren</a>
-    </div>
-  </section>
-
-  <!-- ===== FAQ ===== -->
-  <section class="py-16 md:py-28 bg-champagne">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6"><h2 class="text-2xl sm:text-3xl md:text-4xl font-canela text-emerald text-center mb-8 md:mb-12 reveal">Häufig gestellte Fragen</h2>
-      <div class="space-y-4 sm:space-y-6">
-        <details class="bg-white/80 rounded-3xl p-5 sm:p-6 group"><summary class="font-medium cursor-pointer flex justify-between">Ist Aloelujah bio-zertifiziert?<span class="text-gold group-open:rotate-180">↓</span></summary><p class="mt-4 text-charcoal/80">Ja. Unsere Aloe trägt die offizielle EU-Bio-Zertifizierung.</p></details>
-        <details class="bg-white/80 rounded-3xl p-5 sm:p-6 group"><summary class="font-medium cursor-pointer flex justify-between">Wie funktioniert das Partner-Programm?<span class="text-gold group-open:rotate-180">↓</span></summary><p class="mt-4 text-charcoal/80">15 % Provision auf alle Verkäufe über deinen Link, plus Teamboni.</p></details>
-        <details class="bg-white/80 rounded-3xl p-5 sm:p-6 group"><summary class="font-medium cursor-pointer flex justify-between">Kann ich nur kaufen, ohne Partner zu werden?<span class="text-gold group-open:rotate-180">↓</span></summary><p class="mt-4 text-charcoal/80">Selbstverständlich. Der Shop steht allen offen.</p></details>
-      </div>
-    </div>
-  </section>
-
-  <!-- ===== NEWSLETTER ===== -->
-  <section class="py-16 md:py-20 bg-dustyrose text-champagne">
-    <div class="max-w-2xl mx-auto px-4 sm:px-6 text-center"><h2 class="text-2xl sm:text-3xl md:text-4xl font-canela mb-3">Bleib im Mudita Circle</h2><p class="text-base sm:text-lg mb-6">Erhalte wöchentliche Vintage-Ritual-Tipps direkt in dein Postfach.</p>
-      <form class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto"><input type="email" placeholder="deine@email.de" class="flex-1 px-5 py-3 rounded-full border border-gold/30 bg-white/90 text-charcoal"><button type="submit" class="bg-gold text-charcoal px-8 py-3 rounded-full font-medium hover:bg-emerald hover:text-champagne transition">Abonnieren</button></form>
-      <p class="text-xs mt-5 text-champagne/70">Jederzeit kündbar. Nur schöne Inhalte.</p>
-    </div>
-  </section>
-
-  <!-- ===== FOOTER (mit Danavara) ===== -->
-  <footer class="bg-charcoal text-champagne py-12 md:py-16 text-center">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6">
-      <h3 class="text-3xl sm:text-4xl md:text-5xl font-canela text-gold mb-3 sm:mb-4">Aloelujah</h3>
-      <p class="text-base sm:text-lg md:text-2xl mb-6 sm:mb-8">WIR, MIT DIR... leben VITALITÄT!</p>
-      <div class="flex items-center justify-center gap-2 mb-6"><span class="text-xs uppercase tracking-[0.3em] text-champagne/50">part of</span><div class="flex items-center gap-1"><span class="text-xl text-gold">◈</span><span class="font-serif text-lg text-champagne/80">Danavara</span></div></div>
-      <div class="flex flex-wrap justify-center gap-x-6 sm:gap-x-8 gap-y-3 text-xs sm:text-sm md:text-base mb-6 sm:mb-8"><a href="/impressum" class="hover:text-gold">Impressum</a><a href="/datenschutz" class="hover:text-gold">Datenschutz</a><a href="mailto:hallo@aloelujah.com" class="hover:text-gold">Kontakt</a><a href="https://instagram.com/aloelujah" target="_blank" rel="noopener" class="hover:text-gold">Instagram</a><a href="https://tiktok.com/@aloelujah" target="_blank" rel="noopener" class="hover:text-gold">TikTok</a></div>
-      <p class="text-xs opacity-70">© 2026 Aloelujah – Ein Danavara Unternehmen. Handmade with love in Mallorca.</p>
-    </div>
-  </footer>
-
-  <!-- ===== JAVASCRIPT (Voll funktionsfähig, alle Dynamiken wieder aktiv) ===== -->
-  <script>
-    (function() {
-      "use strict";
-      
-      // Mobile Menu
-      const menuBtn = document.getElementById('mobile-menu-btn');
-      const mobileMenu = document.getElementById('mobile-menu');
-      const mobileLinks = document.querySelectorAll('.mobile-link');
-      if (menuBtn && mobileMenu) {
-        menuBtn.addEventListener('click', (e) => {
-          e.stopPropagation();
-          mobileMenu.classList.toggle('hidden');
-          menuBtn.textContent = mobileMenu.classList.contains('hidden') ? '☰' : '✕';
-        });
-        mobileLinks.forEach(link => link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-          menuBtn.textContent = '☰';
-        }));
-        document.addEventListener('click', (e) => {
-          if (!mobileMenu.contains(e.target) && !menuBtn.contains(e.target) && !mobileMenu.classList.contains('hidden')) {
-            mobileMenu.classList.add('hidden');
-            menuBtn.textContent = '☰';
-          }
-        });
-      }
-
-      // Custom Cursor
-      const cursor = document.getElementById('cursor');
-      if (cursor && window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
-        document.addEventListener('mousemove', e => { if (window.gsap) gsap.to(cursor, { x: e.clientX, y: e.clientY, duration: 0.4, ease: "power2.out" }); });
-        document.querySelectorAll('a, button, .btn-ink, #slider-divider').forEach(el => {
-          el.addEventListener('mouseenter', () => cursor.classList.add('hover'));
-          el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
-        });
-      } else if (cursor) cursor.style.display = 'none';
-
-      // Before/After Slider
-      const beforeAfter = document.getElementById('before-after'), divider = document.getElementById('slider-divider'), afterImage = document.getElementById('after-image');
-      let isDragging = false;
-      if (divider && beforeAfter && afterImage) {
-        const moveDivider = (clientX) => {
-          const rect = beforeAfter.getBoundingClientRect();
-          let percent = ((clientX - rect.left) / rect.width) * 100;
-          percent = Math.max(5, Math.min(95, percent));
-          divider.style.left = percent + '%';
-          afterImage.style.clipPath = `inset(0 ${100 - percent}% 0 0)`;
-        };
-        divider.addEventListener('mousedown', (e) => { e.preventDefault(); isDragging = true; });
-        divider.addEventListener('touchstart', (e) => { e.preventDefault(); isDragging = true; }, { passive: false });
-        document.addEventListener('mousemove', (e) => { if (isDragging) moveDivider(e.clientX); });
-        document.addEventListener('touchmove', (e) => { if (isDragging) moveDivider(e.touches[0].clientX); }, { passive: false });
-        document.addEventListener('mouseup', () => isDragging = false);
-        document.addEventListener('touchend', () => isDragging = false);
-      }
-
-      // GSAP & Lenis
-      gsap.registerPlugin(ScrollTrigger);
-      gsap.to(".letter", { y: 0, opacity: 1, stagger: 0.08, duration: 1.5, ease: "power4.out", delay: 0.3 });
-      try {
-        const lenis = new Lenis({ lerp: 0.07, smoothWheel: true });
-        gsap.ticker.add(time => lenis.raf(time * 1000));
-        gsap.ticker.lagSmoothing(0);
-      } catch (e) { console.warn("Lenis nicht geladen"); }
-
-      // Reveal
-      const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
-      }, { threshold: 0.1, rootMargin: "0px 0px -50px 0px" });
-      document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
-
-      // Parallax
-      const parallaxImg = document.getElementById("parallaxImage");
-      if (parallaxImg && window.innerWidth >= 1024) {
-        window.addEventListener("scroll", () => { const offset = window.scrollY * -0.04; parallaxImg.style.transform = `translateY(${offset}px)`; }, { passive: true });
-      }
-
-      // Ja-Straße
-      let jaStep = 0;
-      const jaSteps = [document.getElementById('ja-step-1'), document.getElementById('ja-step-2'), document.getElementById('ja-step-3')];
-      document.getElementById('ja-strasse-ja')?.addEventListener('click', () => {
-        if (jaStep < 3) {
-          jaSteps[jaStep].classList.add('completed');
-          jaSteps[jaStep].querySelector('.check').textContent = '✓';
-          jaStep++;
-        }
-        if (jaStep === 3) {
-          document.querySelector('.ja-strasse-container').style.opacity = '0.5';
-          document.getElementById('quiz-container')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-        }
-      });
-
-      // Social Proof Popup
-      const popup = document.getElementById('social-proof-popup'), popupText = document.getElementById('social-proof-text'), popupTime = document.getElementById('social-proof-time');
-      const names = ['Clara','Sophie','Elena','Anna','Lukas','Marie','Thomas','Laura'], cities = ['München','Berlin','Hamburg','Köln','Stuttgart','Wien','Zürich','Leipzig'], products = ['Timeless Elixir','Velvet Hand Balm','Golden Hour Body Oil'];
-      function showRandomPurchase() {
-        if (!popup || !popupText || !popupTime) return;
-        const name = names[Math.floor(Math.random()*names.length)], city = cities[Math.floor(Math.random()*cities.length)], product = products[Math.floor(Math.random()*products.length)], minutes = Math.floor(Math.random()*15)+1;
-        popupText.innerHTML = `Gerade hat <strong>${name}</strong> aus <strong>${city}</strong> das <span class="product">${product}</span> gekauft`;
-        popupTime.textContent = `vor ${minutes} ${minutes===1?'Minute':'Minuten'}`;
-        popup.classList.add('show');
-        setTimeout(() => popup.classList.remove('show'), 5000);
-      }
-      let popupInterval = setInterval(showRandomPurchase, 15000);
-      setTimeout(showRandomPurchase, 3000);
-      document.addEventListener('visibilitychange', () => { if (document.hidden) clearInterval(popupInterval); else popupInterval = setInterval(showRandomPurchase, 15000); });
-
-      // Exit Popup
-      const exitPopup = document.getElementById('exit-popup'), exitClose = document.getElementById('exit-close'), exitForm = document.getElementById('exit-form');
-      let exitShown = false;
-      document.addEventListener('mouseleave', (e) => { if (e.clientY <= 0 && !exitShown) { exitShown = true; exitPopup?.classList.add('show'); if (typeof fbq !== 'undefined') fbq('track', 'ViewContent', { content_name: 'ExitPopup' }); } });
-      exitClose?.addEventListener('click', () => exitPopup.classList.remove('show'));
-      exitPopup?.addEventListener('click', (e) => { if (e.target === exitPopup) exitPopup.classList.remove('show'); });
-      exitForm?.addEventListener('submit', (e) => { e.preventDefault(); if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'ExitPopup' }); alert('✨ Dein Guide ist unterwegs!'); exitPopup.classList.remove('show'); });
-
-      // Notifications
-      const notifBtn = document.getElementById('enable-notifications'), notifBtnMobile = document.getElementById('enable-notifications-mobile');
-      async function checkNotificationStatus() {
-        if (typeof OneSignal === 'undefined' || !OneSignal.getNotificationPermission) return;
-        const permission = await OneSignal.getNotificationPermission();
-        if (permission === 'granted') { notifBtn?.classList.add('hidden'); notifBtnMobile?.classList.add('hidden'); }
-        else { notifBtn?.classList.remove('hidden'); notifBtnMobile?.classList.remove('hidden'); }
-      }
-      function requestNotification() {
-        if (typeof OneSignal !== 'undefined') {
-          OneSignal.registerForPushNotifications();
-          OneSignal.on?.('subscriptionChange', () => { notifBtn?.classList.add('hidden'); notifBtnMobile?.classList.add('hidden'); });
-        } else alert('🔔 Bestätige die Benachrichtigung!');
-      }
-      notifBtn?.addEventListener('click', requestNotification);
-      notifBtnMobile?.addEventListener('click', requestNotification);
-      setTimeout(checkNotificationStatus, 2000);
-
-      // Quiz
-      const questions = [ { q: "Dein perfekter Abend ist…", options: [{text:"Ein ruhiges Bad mit Kerzenlicht und Journal",score:"romantic"},{text:"Ein Treffen mit Freunden in einem schönen Café",score:"social"},{text:"Zeit für mich allein mit Buch und Tee",score:"quiet"},{text:"Ein eleganter Spaziergang oder Tanz zu Hause",score:"elegant"}] }, { q: "Welches Gefühl suchst du bei deiner Hautpflege am meisten?", options: [{text:"Tiefe Beruhigung und Regeneration",score:"calm"},{text:"Luxuriöses, gepflegtes Gefühl",score:"luxury"},{text:"Frische und natürliche Strahlkraft",score:"fresh"},{text:"Ein Ritual, das mich mit der Vergangenheit verbindet",score:"ritual"}] }, { q: "Dein Stil ist eher…", options: [{text:"Cottagecore & romantisch",score:"romantic"},{text:"Old Money Eleganz",score:"elegant"},{text:"Minimal & clean",score:"quiet"},{text:"Vintage mit modernem Twist",score:"luxury"}] }, { q: "Was motiviert dich am meisten?", options: [{text:"Zeit für mich und echte Selbstfürsorge",score:"calm"},{text:"Ein eigenes Business im Vintage-Stil aufbauen",score:"ritual"},{text:"Andere Menschen inspirieren und begleiten",score:"social"},{text:"Ein zeitloses, hochwertiges Leben führen",score:"luxury"}] } ];
-      let currentQ = 0, userScores = {}, quizResultData = {};
-      function loadQuizQuestion() {
-        const q = questions[currentQ];
-        document.getElementById('quiz-question').textContent = q.q;
-        const answersContainer = document.getElementById('quiz-answers');
-        answersContainer.innerHTML = '';
-        q.options.forEach(opt => {
-          const btn = document.createElement('button');
-          btn.className = 'quiz-answer-btn p-4 sm:p-6 rounded-2xl text-left border border-gold/30 hover:border-gold transition text-sm sm:text-base';
-          btn.textContent = opt.text;
-          btn.onclick = () => {
-            userScores[opt.score] = (userScores[opt.score] || 0) + 1;
-            if (currentQ < questions.length - 1) {
-              currentQ++;
-              loadQuizQuestion();
-              document.querySelectorAll('.quiz-step-dot')[currentQ]?.classList.add('active', 'bg-gold');
-            } else {
-              showQuizResult();
-              if (typeof fbq !== 'undefined') fbq('track', 'CompleteRegistration', { content_name: 'Quiz' });
-              if (typeof ttq !== 'undefined') ttq.track('CompletePayment', { content_name: 'Quiz' });
-            }
-          };
-          answersContainer.appendChild(btn);
-        });
-        document.getElementById('quiz-prev').disabled = currentQ === 0;
-      }
-      function showQuizResult() {
-        document.getElementById('quiz-container').classList.add('hidden');
-        const resultSection = document.getElementById('quiz-result');
-        resultSection.classList.remove('hidden');
-        const topScore = Math.max(...Object.values(userScores));
-        const winner = Object.keys(userScores).find(key => userScores[key] === topScore);
-        let title = "Der Zeitlose Romantiker", desc = "Du suchst tiefe Ruhe und echte Rituale.", product = "Golden Hour Body Oil", ritual = ["Abendliches Körperöl-Ritual","Langsames Einmassieren","Tiefes Durchatmen"];
-        if (winner === "luxury" || winner === "elegant") { title = "Der Elegant Vintage Soul"; desc = "Du schätzt Luxus und zeitlose Eleganz."; product = "Timeless Aloe Elixir"; ritual = ["Morgendliches Serum-Ritual","Sanftes Einklopfen","Moment der Stille"]; }
-        else if (winner === "calm" || winner === "quiet") { title = "Der Ruhige Träumer"; desc = "Du suchst sanfte Regeneration und innere Balance."; product = "Velvet Hand Balm"; ritual = ["Handpflege-Ritual","Achtsames Eincremen","Tee dazu genießen"]; }
-        quizResultData = { title, desc, product, ritual };
-        document.getElementById('quiz-result-title').textContent = title;
-        document.getElementById('quiz-result-desc').textContent = desc;
-        document.getElementById('quiz-result-product').textContent = product;
-        document.getElementById('quiz-result-ritual').innerHTML = ritual.map(item => `<li>${item}</li>`).join('');
-      }
-      document.getElementById('quiz-prev')?.addEventListener('click', () => { if (currentQ > 0) { currentQ--; loadQuizQuestion(); } });
-      document.getElementById('download-ritual-pdf')?.addEventListener('click', () => {
-        const { title, desc, product, ritual } = quizResultData;
-        const content = `══ ALOELUJAH RITUAL ══\n\n${title}\n\n${desc}\n\nEmpfohlen: ${product}\n\n${ritual.map((r,i)=>`${i+1}. ${r}`).join('\n')}`;
-        const blob = new Blob([content], { type: 'text/plain' });
-        const a = document.createElement('a');
-        a.href = URL.createObjectURL(blob);
-        a.download = 'Aloelujah_Ritual.txt';
-        a.click();
-        if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'PDF_Download' });
-      });
-      loadQuizQuestion();
-
-      // Quiz Lead Overlay
-      document.getElementById('quiz-lead-open')?.addEventListener('click', () => document.getElementById('quiz-lead-overlay').classList.remove('hidden'));
-      document.getElementById('quiz-lead-close')?.addEventListener('click', () => document.getElementById('quiz-lead-overlay').classList.add('hidden'));
-      document.getElementById('quiz-lead-form')?.addEventListener('submit', (e) => {
-        e.preventDefault();
-        if (typeof fbq !== 'undefined') fbq('track', 'Lead', { content_name: 'Quiz_Email' });
-        alert('✨ Dein Ritual ist unterwegs!');
-        document.getElementById('quiz-lead-overlay').classList.add('hidden');
-      });
-
-      console.log("%c🌸 Aloelujah – Alle Dynamiken + Claude-Fixes aktiv", "color:#D4AF87; font-size:14px; font-weight:bold");
-    })();
-
-
-    // Nav Scroll Effect
-  (function(){
-    var nav = document.getElementById('mainNav');
-    if(!nav) return;
-    window.addEventListener('scroll', function(){
-      if(window.scrollY > 50){ nav.classList.add('nav-scrolled'); }
-      else { nav.classList.remove('nav-scrolled'); }
-    }, {passive:true});
-  })();
-
-  // Sticky Mobile CTA
-const stickyCta = document.getElementById('mobile-sticky-cta');
-const muditaSection = document.getElementById('mudita');
-const quizSection = document.getElementById('quiz');
-
-if (stickyCta) {
-  window.addEventListener('scroll', () => {
-    const muditaRect = muditaSection?.getBoundingClientRect();
-    const quizRect = quizSection?.getBoundingClientRect();
-    
-    // Ausblenden, wenn Mudita- oder Quiz-Section sichtbar ist
-    if ((muditaRect && muditaRect.top < window.innerHeight && muditaRect.bottom > 0) ||
-        (quizRect && quizRect.top < window.innerHeight && quizRect.bottom > 0)) {
-      stickyCta.style.opacity = '0';
-      stickyCta.style.pointerEvents = 'none';
-    } else {
-      stickyCta.style.opacity = '1';
-      stickyCta.style.pointerEvents = 'auto';
-    }
-  });
-}
-
-
-  </script>
-
-<!-- ===== STICKY MOBILE CTA ===== -->
-<div id="mobile-sticky-cta" class="mobile-sticky-footer hidden">
-  <div class="flex gap-3">
-    <a href="#mudita" class="flex-1 art-deco-btn bg-gold text-charcoal py-3 text-center font-medium text-sm">
-      Mudita Circle →
-    </a>
-    <a href="#quiz" class="flex-1 art-deco-btn-outline border-2 border-gold text-charcoal py-3 text-center text-sm">
-      Ritual finden
-    </a>
+<!-- Mobile menu -->
+<div id="mobileMenu" class="mobile-menu grain flex flex-col">
+  <div class="flex items-center justify-between px-6 py-6">
+    <div class="font-display italic txt-gold text-2xl">Aloelujah</div>
+    <button id="burgerClose" class="txt-cream w-10 h-10" aria-label="Menü schließen">✕</button>
+  </div>
+  <div class="flex-1 flex flex-col items-center justify-center gap-8 font-display italic txt-cream text-4xl">
+    <a href="#story" data-close>Story</a>
+    <a href="#rituale" data-close>Rituale</a>
+    <a href="#mudita" data-close>Mudita Circle</a>
+    <a href="#partner" data-close>Partner werden</a>
+    <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener" class="btn-deco btn-gold mt-4 text-sm not-italic font-body">Ritual entdecken <span class="arrow">→</span></a>
   </div>
 </div>
 
-<!-- Service Worker -->
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', () => {
-        navigator.serviceWorker.register('/sw.js')
-          .then(r => console.log('SW aktiv:', r.scope))
-          .catch(e => console.warn('SW Fehler:', e));
+<main id="top">
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- HERO — "Das Versprechen"                            -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hero-bg grain relative overflow-hidden" style="min-height:100vh;">
+  <!-- Decorative aloe leaves -->
+  <svg class="absolute top-[8%] -left-20 w-[360px] opacity-[.22] hidden md:block" viewBox="0 0 300 600" aria-hidden="true">
+    <g stroke="#D4AF87" stroke-width="1" fill="none">
+      <path d="M140 580 C 100 400, 80 260, 120 60 C 130 120, 150 200, 155 400 C 155 480, 148 540, 140 580 Z"/>
+      <path d="M160 580 C 190 420, 210 280, 180 80 C 170 140, 158 220, 160 420 C 161 490, 158 550, 160 580 Z"/>
+      <path d="M120 560 C 80 420, 60 300, 90 140 C 95 220, 110 320, 120 460 C 122 510, 120 540, 120 560 Z"/>
+    </g>
+  </svg>
+  <svg class="absolute bottom-[4%] -right-24 w-[420px] opacity-[.18] hidden md:block" viewBox="0 0 300 600" style="transform:scaleX(-1)" aria-hidden="true">
+    <g stroke="#D4AF87" stroke-width="1" fill="none">
+      <path d="M140 580 C 100 400, 80 260, 120 60 C 130 120, 150 200, 155 400 C 155 480, 148 540, 140 580 Z"/>
+      <path d="M160 580 C 190 420, 210 280, 180 80 C 170 140, 158 220, 160 420 C 161 490, 158 550, 160 580 Z"/>
+      <path d="M120 560 C 80 420, 60 300, 90 140 C 95 220, 110 320, 120 460 C 122 510, 120 540, 120 560 Z"/>
+    </g>
+  </svg>
+
+  <!-- Faint monogram watermark -->
+  <div class="absolute right-[6%] top-[22%] hidden xl:block pointer-events-none" aria-hidden="true">
+    <div class="font-display italic text-[22rem] leading-none" style="color:rgba(212,175,135,.055)">A</div>
+  </div>
+
+  <div class="relative max-w-[1400px] mx-auto px-6 md:px-10 pt-40 md:pt-48 pb-28">
+
+    <div class="reveal deco-line mb-8">
+      <span class="rule"></span><span class="diamond hollow"></span><span class="diamond"></span><span class="diamond hollow"></span><span class="rule"></span>
+    </div>
+
+    <div class="reveal text-center">
+      <span class="font-script txt-gold text-3xl md:text-4xl">direkt aus Mallorca</span>
+    </div>
+
+    <h1 class="hero-h1 text-center mt-4 reveal">
+      <span class="line1">Aloe-</span>
+      <span class="line2">lujah</span>
+    </h1>
+
+    <div class="reveal rule-gold w-[180px] mx-auto mt-10 mb-8"></div>
+
+    <p class="reveal font-quote italic text-center max-w-2xl mx-auto text-xl md:text-[1.6rem] leading-[1.45]" style="color:rgba(253,251,247,.78)">
+      Du weißt, dass deine Haut mehr verdient als Kompromisse.<br class="hidden md:block"/>
+      Echte Bio-Aloe-Vera — geerntet, wo die Sonne brennt.
+    </p>
+
+    <div class="reveal mt-10 flex flex-wrap gap-3 justify-center">
+      <span class="pill"><span class="dot"></span>95 % natürlich</span>
+      <span class="pill"><span class="dot"></span>COSMOS Organic</span>
+      <span class="pill"><span class="dot"></span>Handgeerntet</span>
+    </div>
+
+    <div class="reveal mt-12 flex flex-col sm:flex-row gap-5 justify-center items-center">
+      <a class="btn-deco btn-gold" href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener">
+        Mein Ritual entdecken <span class="arrow">→</span>
+      </a>
+      <a class="btn-deco btn-ghost" href="#partner">
+        15 % Provision · Partner werden
+      </a>
+    </div>
+
+    <div class="reveal mt-14 flex items-center justify-center gap-3 text-sm" style="color:rgba(253,251,247,.75)">
+      <span class="txt-gold tracking-widest">★★★★★</span>
+      <span class="font-quote italic text-lg">4,9 / 5 — von 8.000 Romantiker:innen</span>
+    </div>
+
+  </div>
+
+  <!-- Proof bar -->
+  <div class="reveal relative border-t border-b" style="border-color:rgba(212,175,135,.25);background:rgba(0,0,0,.2);">
+    <div class="max-w-[1400px] mx-auto px-6 md:px-10 py-5 flex flex-wrap gap-x-10 gap-y-3 items-center justify-center md:justify-between text-[.72rem] md:text-[.78rem] tracking-[.28em] uppercase" style="color:rgba(253,251,247,.72);font-family:'Lora',serif;">
+      <span class="flex items-center gap-3"><span class="diamond" style="display:inline-block;width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);"></span>COSMOS Organic</span>
+      <span class="flex items-center gap-3"><span class="diamond" style="display:inline-block;width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);"></span>95 % Natürlich</span>
+      <span class="flex items-center gap-3"><span class="diamond" style="display:inline-block;width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);"></span>30 Tage Garantie</span>
+      <span class="flex items-center gap-3"><span class="diamond" style="display:inline-block;width:5px;height:5px;background:#D4AF87;transform:rotate(45deg);"></span>The Mudita Circle</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PROBLEM — "Der Schmerz"                             -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="cream-bg grain grain-light relative py-28 md:py-36" id="schmerz">
+  <!-- botanical watermark -->
+  <svg class="absolute -right-16 top-16 w-[380px] opacity-[.08] hidden md:block" viewBox="0 0 300 600" aria-hidden="true">
+    <g stroke="#1A3B32" stroke-width="1" fill="none">
+      <path d="M150 580 C 110 400, 90 260, 130 60"/>
+      <path d="M150 580 C 190 420, 210 280, 180 80"/>
+      <path d="M130 560 C 90 420, 70 300, 100 140"/>
+      <path d="M170 560 C 210 420, 230 300, 200 140"/>
+    </g>
+  </svg>
+
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10 relative">
+    <div class="reveal deco-line mb-8 txt-cognac">
+      <span class="rule" style="background:linear-gradient(90deg, transparent, rgba(139,58,58,.5), transparent)"></span>
+      <span class="diamond hollow"></span><span class="diamond"></span><span class="diamond hollow"></span>
+      <span class="rule" style="background:linear-gradient(90deg, transparent, rgba(139,58,58,.5), transparent)"></span>
+    </div>
+
+    <p class="reveal text-center font-script txt-cognac text-3xl mb-6">ehrlich gesagt —</p>
+
+    <h2 class="reveal font-display text-charcoal text-center max-w-4xl mx-auto leading-[1.08] text-[2.2rem] md:text-[3.4rem]" style="color:var(--charcoal)">
+      Du kennst das Gefühl — du kaufst.
+      <span class="italic txt-cognac">Wieder.</span>
+      Und <span class="italic txt-cognac">wieder</span>.
+      Und deine Haut fühlt sich immer noch…
+      <span class="font-script txt-cognac text-[.9em]">irgendwie nicht richtig</span> an.
+    </h2>
+
+    <div class="reveal rule-green w-40 mx-auto my-16"></div>
+
+    <!-- asymmetric 3-card grid, middle card offset -->
+    <div class="grid md:grid-cols-3 gap-8 md:gap-10">
+      <article class="reveal deco-frame">
+        <span class="corner tr"></span><span class="corner bl"></span>
+        <div class="text-xs tracking-[.3em] uppercase txt-cognac mb-5">Nº 01</div>
+        <h3 class="font-display italic text-2xl md:text-[1.65rem] leading-tight mb-4" style="color:var(--charcoal)">
+          Inhaltslisten, die du nicht aussprechen kannst.
+        </h3>
+        <p class="text-[1.02rem] leading-[1.75] text-neutral-700">
+          Füllstoffe. Silikone. Künstliche Duftstoffe. Produkte die versprechen — und dann leise enttäuschen. Du drehst die Verpackung um und weißt schon, dass du wieder nicht weißt, was du dir aufträgst.
+        </p>
+      </article>
+
+      <article class="reveal deco-frame md:mt-14">
+        <span class="corner tr"></span><span class="corner bl"></span>
+        <div class="text-xs tracking-[.3em] uppercase txt-cognac mb-5">Nº 02</div>
+        <h3 class="font-display italic text-2xl md:text-[1.65rem] leading-tight mb-4" style="color:var(--charcoal)">
+          Der Supermarkt-Kreislauf.
+        </h3>
+        <p class="text-[1.02rem] leading-[1.75] text-neutral-700">
+          Immer das Gleiche. Immer eine neue Verpackung für dasselbe mittelmäßige Ergebnis. Und tief drinnen weißt du: Du verdienst mehr als den Durchschnitt im Regal neben den Zahnbürsten.
+        </p>
+      </article>
+
+      <article class="reveal deco-frame">
+        <span class="corner tr"></span><span class="corner bl"></span>
+        <div class="text-xs tracking-[.3em] uppercase txt-cognac mb-5">Nº 03</div>
+        <h3 class="font-display italic text-2xl md:text-[1.65rem] leading-tight mb-4" style="color:var(--charcoal)">
+          Die Zeit, die du verschwendest.
+        </h3>
+        <p class="text-[1.02rem] leading-[1.75] text-neutral-700">
+          Stunden mit Recherche. Testberichten, die sich widersprechen. Nicht mehr wissen, was wirklich wirkt — und noch schlimmer: dem eigenen Gefühl nicht mehr trauen.
+        </p>
+      </article>
+    </div>
+  </div>
+
+  <!-- diagonal cut -->
+  <div class="absolute left-0 right-0 -bottom-px h-[120px]" aria-hidden="true" style="background:var(--green);clip-path:polygon(0 100%, 100% 100%, 100% 8%, 0 62%);"></div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SOLUTION — "Die Antwort"                            -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hero-bg grain relative py-28 md:py-40" id="rituale">
+  <div class="max-w-[1300px] mx-auto px-6 md:px-10 relative">
+
+    <div class="reveal deco-line mb-8">
+      <span class="rule"></span><span class="diamond"></span><span class="rule"></span>
+    </div>
+    <p class="reveal font-script txt-gold text-center text-3xl mb-4">die antwort —</p>
+
+    <h2 class="reveal font-display italic txt-gold text-center leading-[1.05] text-[2.4rem] md:text-[4rem] max-w-4xl mx-auto">
+      Was wäre, wenn Pflege sich wieder <span class="not-italic txt-cream">einfach</span> anfühlen würde?
+    </h2>
+
+    <div class="reveal rule-gold w-40 mx-auto my-14"></div>
+
+    <!-- Asymmetric 2+2 grid: feature on left, 3 small on right -->
+    <div class="grid md:grid-cols-12 gap-7">
+      <!-- Feature card -->
+      <article class="reveal md:col-span-7 card-green grain p-10 md:p-14 relative overflow-hidden">
+        <div class="absolute top-6 right-6 text-xs tracking-[.3em] uppercase txt-gold opacity-70">Nº i · feature</div>
+        <!-- ornament -->
+        <svg class="absolute -right-10 -bottom-16 w-[280px] opacity-25" viewBox="0 0 200 200" aria-hidden="true">
+          <g stroke="#D4AF87" fill="none" stroke-width="1">
+            <circle cx="100" cy="100" r="90"/>
+            <circle cx="100" cy="100" r="70"/>
+            <path d="M100 10 L110 100 L100 190 L90 100 Z" fill="#D4AF87" opacity=".6"/>
+            <path d="M10 100 L100 90 L190 100 L100 110 Z" fill="#D4AF87" opacity=".6"/>
+          </g>
+        </svg>
+        <div class="relative">
+          <div class="font-script txt-gold text-3xl mb-3">dein erstes mal —</div>
+          <h3 class="font-display italic txt-cream text-4xl md:text-5xl leading-[1.05] mb-6">Deine Haut atmet wieder.</h3>
+          <p class="font-quote italic text-xl md:text-2xl leading-[1.5]" style="color:rgba(253,251,247,.82)">
+            Aloe Vera mit 95 %+ natürlichen Inhaltsstoffen. Keine Silikone, keine Füllstoffe, keine Versprechen, die beim Auftragen schon wieder verdunsten. Du spürst den Unterschied — ab der ersten Anwendung. Und dann wieder. Und wieder.
+          </p>
+          <div class="mt-8 flex items-center gap-4 text-xs tracking-[.3em] uppercase" style="color:rgba(212,175,135,.8)">
+            <span>95 % natürlich</span>
+            <span class="block w-6 h-px bg-current opacity-40"></span>
+            <span>COSMOS Organic</span>
+          </div>
+        </div>
+      </article>
+
+      <!-- Right column (3 stacked) -->
+      <div class="md:col-span-5 flex flex-col gap-7">
+        <article class="reveal card-green grain p-8 relative">
+          <div class="absolute top-6 right-6 text-xs tracking-[.3em] uppercase txt-gold opacity-70">Nº ii</div>
+          <h3 class="font-display italic txt-cream text-2xl md:text-[1.8rem] leading-tight mb-3">Ein Ritual, das bleibt.</h3>
+          <p class="text-[1rem] leading-[1.7]" style="color:rgba(253,251,247,.75)">
+            Nicht noch ein Produkt im Badschrank. Sondern ein Morgenmoment, auf den du dich freust, bevor der Kaffee fertig ist.
+          </p>
+        </article>
+
+        <article class="reveal card-green grain p-8 relative">
+          <div class="absolute top-6 right-6 text-xs tracking-[.3em] uppercase txt-gold opacity-70">Nº iii</div>
+          <h3 class="font-display italic txt-cream text-2xl md:text-[1.8rem] leading-tight mb-3">Direkt von der Quelle.</h3>
+          <p class="text-[1rem] leading-[1.7]" style="color:rgba(253,251,247,.75)">
+            Handgeerntet auf Mallorca. Kein Umweg über dreizehn Hände. Du weißt, was du benutzt — und wer es für dich gepflegt hat.
+          </p>
+        </article>
+
+        <article class="reveal card-green grain p-8 relative">
+          <div class="absolute top-6 right-6 text-xs tracking-[.3em] uppercase txt-gold opacity-70">Nº iv</div>
+          <h3 class="font-display italic txt-cream text-2xl md:text-[1.8rem] leading-tight mb-3">Dein Tempo.</h3>
+          <p class="text-[1rem] leading-[1.7]" style="color:rgba(253,251,247,.75)">
+            Kein Abo-Zwang, kein Druck. Und wenn du magst — kannst du sogar davon leben. 15 % Provision, wenn du teilst, was du liebst.
+          </p>
+        </article>
+      </div>
+    </div>
+
+    <div class="reveal mt-16 text-center">
+      <a class="btn-deco btn-gold" href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener">
+        Ritual entdecken <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- STORY                                               -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="relative py-28 md:py-40" id="story" style="background:var(--cream-warm);">
+  <div class="grain grain-light absolute inset-0 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10 relative">
+
+    <div class="grid md:grid-cols-12 gap-14 items-start">
+      <!-- Left: portrait placeholder -->
+      <div class="reveal md:col-span-5">
+        <div class="relative">
+          <!-- art-deco frame around placeholder -->
+          <div class="relative aspect-[3/4] overflow-hidden" style="background:repeating-linear-gradient(45deg, #EFE7D4 0 12px, #E8DDC4 12px 24px);">
+            <!-- subtle leaf -->
+            <svg class="absolute inset-0 w-full h-full opacity-30" viewBox="0 0 300 400" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+              <g stroke="#1A3B32" stroke-width="1" fill="none" opacity=".5">
+                <path d="M150 400 C 100 260, 80 140, 130 0"/>
+                <path d="M150 400 C 200 280, 220 160, 180 20"/>
+                <path d="M130 380 C 80 260, 60 160, 110 40"/>
+              </g>
+            </svg>
+            <!-- caption -->
+            <div class="absolute bottom-4 left-4 right-4 text-center font-mono text-[.65rem] tracking-[.28em] uppercase" style="color:rgba(47,46,45,.55)">[ Portrait · Gründerin · ersetzen ]</div>
+          </div>
+          <!-- corner gold marks -->
+          <span class="absolute -top-2 -left-2 w-6 h-6 border-t border-l" style="border-color:var(--gold)"></span>
+          <span class="absolute -top-2 -right-2 w-6 h-6 border-t border-r" style="border-color:var(--gold)"></span>
+          <span class="absolute -bottom-2 -left-2 w-6 h-6 border-b border-l" style="border-color:var(--gold)"></span>
+          <span class="absolute -bottom-2 -right-2 w-6 h-6 border-b border-r" style="border-color:var(--gold)"></span>
+
+          <div class="mt-6 font-script txt-cognac text-3xl text-center">— von Hand, mit Zeit.</div>
+        </div>
+      </div>
+
+      <!-- Right: story -->
+      <div class="md:col-span-7">
+        <div class="reveal deco-line mb-6 txt-cognac justify-start">
+          <span class="diamond"></span><span class="rule" style="background:linear-gradient(90deg, rgba(139,58,58,.5), transparent)"></span>
+        </div>
+        <p class="reveal text-xs tracking-[.35em] uppercase txt-cognac mb-4 font-body">Kapitel · Eins</p>
+        <h2 class="reveal font-display leading-[1.05] text-[2.4rem] md:text-[3.6rem] mb-8" style="color:var(--charcoal)">
+          Ich bin kein Konzern.<br/>
+          <span class="italic txt-cognac">Ich bin jemand,</span> der wirklich von diesen Produkten überzeugt ist.
+        </h2>
+
+        <div class="reveal font-quote italic text-[1.3rem] leading-[1.7] mb-10" style="color:var(--charcoal)">
+          <p class="dropcap">
+            Und genau deshalb teile ich sie. Nicht, weil jemand mir Quoten gesetzt hat — sondern weil ich an einem Morgen auf Mallorca gestanden habe, eine Aloe-Pflanze in der Hand, und verstanden habe, was der Unterschied zwischen <em>Kosmetik</em> und <em>Ritual</em> wirklich ist.
+          </p>
+          <p class="mt-5">
+            Es ist nicht das Produkt. Es ist die Geste. Die Entscheidung, dir jeden Morgen zwei Minuten zurückzugeben, in denen du nicht funktionierst, sondern <em>bist</em>.
+          </p>
+        </div>
+
+        <div class="reveal rule-green w-32 mb-10"></div>
+
+        <!-- timeline -->
+        <div class="relative pl-6">
+          <div class="timeline-line"></div>
+          <div class="reveal timeline-row mb-8">
+            <span class="timeline-year">1928</span>
+            <p class="font-quote italic text-[1.15rem] leading-[1.6]" style="color:var(--charcoal)">
+              In einem Pariser Parfümhaus wird ein Grundsatz geboren: <em>Qualität ist eine stille Entscheidung</em>. Keine Werbung. Keine Versprechen. Nur das, was funktioniert — und bleibt.
+            </p>
+          </div>
+          <div class="reveal timeline-row mb-8">
+            <span class="timeline-year">2019</span>
+            <p class="font-quote italic text-[1.15rem] leading-[1.6]" style="color:var(--charcoal)">
+              Eine Aloe-Plantage im Norden Mallorcas. Sonne, Salz, Geduld. Hier entsteht, was heute in deinem Badezimmer steht.
+            </p>
+          </div>
+          <div class="reveal timeline-row">
+            <span class="timeline-year">Heute</span>
+            <p class="font-quote italic text-[1.15rem] leading-[1.6]" style="color:var(--charcoal)">
+              <strong class="not-italic font-display text-[1.25em] txt-cognac">Aloelujah.</strong> Ein Versprechen an deine Haut, deine Zeit, deine Entscheidungen. Getragen von <em>The Mudita Circle</em> — Menschen, die einander die guten Dinge einfach gönnen.
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- SOCIAL PROOF                                        -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hero-bg grain relative py-28 md:py-36">
+  <div class="max-w-[1300px] mx-auto px-6 md:px-10 relative">
+
+    <div class="grid md:grid-cols-12 gap-12 items-start">
+      <!-- Left: big number -->
+      <div class="md:col-span-4">
+        <div class="reveal deco-line justify-start mb-5">
+          <span class="diamond"></span><span class="rule"></span>
+        </div>
+        <div class="reveal big-num">8.000<span class="text-[.35em] align-top txt-gold">+</span></div>
+        <p class="reveal font-script txt-gold text-3xl mt-2">Romantiker:innen</p>
+        <p class="reveal font-quote italic text-[1.15rem] mt-6 max-w-sm" style="color:rgba(253,251,247,.78)">
+          haben bereits entschieden, dass ihre Haut mehr verdient. Und — leise, an Küchentischen und in Chat-Fenstern — sagen sie es weiter.
+        </p>
+      </div>
+
+      <!-- Right: testimonials -->
+      <div class="md:col-span-8 flex flex-col gap-8">
+        <figure class="reveal relative pl-10 md:pl-16">
+          <span class="absolute -top-2 left-0 font-display italic txt-gold text-[6rem] leading-none">“</span>
+          <blockquote class="font-quote italic text-[1.5rem] md:text-[1.9rem] leading-[1.4]" style="color:rgba(253,251,247,.92)">
+            Ich hab so viel ausprobiert. Das hier ist das erste Mal, dass ich wirklich <em>spüre</em>, was draufsteht.
+          </blockquote>
+          <figcaption class="mt-4 flex items-center gap-3 text-xs tracking-[.3em] uppercase" style="color:rgba(212,175,135,.9)">
+            <span class="block w-8 h-px bg-current"></span>
+            Sofia M. — München
+          </figcaption>
+        </figure>
+
+        <div class="rule-gold opacity-50"></div>
+
+        <figure class="reveal relative pl-10 md:pl-16 md:ml-16">
+          <span class="absolute -top-2 left-0 font-display italic txt-gold text-[6rem] leading-none">“</span>
+          <blockquote class="font-quote italic text-[1.35rem] md:text-[1.7rem] leading-[1.45]" style="color:rgba(253,251,247,.9)">
+            Als Mann dachte ich, das ist nichts für mich. Jetzt ist es Teil meiner Morgenroutine — und meine Frau klaut es mir heimlich.
+          </blockquote>
+          <figcaption class="mt-4 flex items-center gap-3 text-xs tracking-[.3em] uppercase" style="color:rgba(212,175,135,.9)">
+            <span class="block w-8 h-px bg-current"></span>
+            Thomas R. — Hamburg
+          </figcaption>
+        </figure>
+
+        <div class="rule-gold opacity-50"></div>
+
+        <figure class="reveal relative pl-10 md:pl-16">
+          <span class="absolute -top-2 left-0 font-display italic txt-gold text-[6rem] leading-none">“</span>
+          <blockquote class="font-quote italic text-[1.35rem] md:text-[1.7rem] leading-[1.45]" style="color:rgba(253,251,247,.9)">
+            Und dann hab ich angefangen, es weiterzuempfehlen. Einfach, weil ich's gut fand. Jetzt verdiene ich damit sogar etwas — ohne jemanden je überreden zu müssen.
+          </blockquote>
+          <figcaption class="mt-4 flex items-center gap-3 text-xs tracking-[.3em] uppercase" style="color:rgba(212,175,135,.9)">
+            <span class="block w-8 h-px bg-current"></span>
+            Lena K. — Wien
+          </figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- THE MUDITA CIRCLE                                    -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="relative py-28 md:py-40" id="mudita" style="background:var(--cream);">
+  <div class="grain grain-light absolute inset-0 pointer-events-none"></div>
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10 relative">
+
+    <div class="text-center">
+      <div class="reveal deco-line mb-6 txt-cognac">
+        <span class="rule" style="background:linear-gradient(90deg, transparent, rgba(139,58,58,.5), transparent)"></span>
+        <span class="diamond hollow"></span><span class="diamond"></span><span class="diamond hollow"></span>
+        <span class="rule" style="background:linear-gradient(90deg, transparent, rgba(139,58,58,.5), transparent)"></span>
+      </div>
+      <p class="reveal font-script txt-cognac text-3xl mb-2">मुदिता</p>
+      <p class="reveal text-xs tracking-[.4em] uppercase txt-cognac mb-6">Sanskrit · Mudita</p>
+      <h2 class="reveal font-display leading-[1.05] text-[2.4rem] md:text-[4rem] max-w-4xl mx-auto" style="color:var(--charcoal)">
+        <span class="italic">Selbstlose Mitfreude.</span><br/>
+        Das <span class="txt-cognac italic">Glück</span>, das entsteht, wenn es jemand anderem gut geht.
+      </h2>
+    </div>
+
+    <div class="reveal rule-green w-40 mx-auto my-14"></div>
+
+    <div class="grid md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+      <div class="reveal text-center">
+        <div class="font-display italic txt-cognac text-5xl mb-4">i.</div>
+        <h3 class="font-display text-xl md:text-[1.35rem] mb-3" style="color:var(--charcoal)">Ein Kreis, kein Trichter.</h3>
+        <p class="text-[.98rem] leading-[1.7] text-neutral-700">
+          Niemand verkauft dir etwas. Menschen teilen, was bei ihnen funktioniert — und freuen sich, wenn es bei dir auch funktioniert.
+        </p>
+      </div>
+      <div class="reveal text-center">
+        <div class="font-display italic txt-cognac text-5xl mb-4">ii.</div>
+        <h3 class="font-display text-xl md:text-[1.35rem] mb-3" style="color:var(--charcoal)">Gemeinsame Rituale.</h3>
+        <p class="text-[.98rem] leading-[1.7] text-neutral-700">
+          Monatliche Gespräche, Rezepte, kleine Briefe. Keine Gruppen-Chats mit Pop-ups. Nur das, was man mit einer Freundin teilt.
+        </p>
+      </div>
+      <div class="reveal text-center">
+        <div class="font-display italic txt-cognac text-5xl mb-4">iii.</div>
+        <h3 class="font-display text-xl md:text-[1.35rem] mb-3" style="color:var(--charcoal)">Einander gönnen.</h3>
+        <p class="text-[.98rem] leading-[1.7] text-neutral-700">
+          Wenn du magst, gibst du's weiter. Wenn du nicht magst, ist das auch gut. Und trotzdem bleibst du Teil des Kreises.
+        </p>
+      </div>
+    </div>
+
+    <div class="reveal mt-16 text-center">
+      <a class="btn-deco btn-gold on-cream" style="background:var(--green);color:var(--gold);box-shadow:0 10px 30px -12px rgba(26,59,50,.5);" href="#partner">
+        In den Kreis treten <span class="arrow">→</span>
+      </a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- PARTNER                                             -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hero-bg grain relative py-28 md:py-40" id="partner">
+  <!-- corner ornaments -->
+  <svg class="absolute top-8 left-8 w-20 opacity-50" viewBox="0 0 80 80" aria-hidden="true">
+    <g stroke="#D4AF87" fill="none" stroke-width="1">
+      <path d="M0 0 L40 0 L40 1 L0 1 Z" fill="#D4AF87"/>
+      <path d="M0 0 L0 40 L1 40 L1 0 Z" fill="#D4AF87"/>
+      <path d="M10 10 L 26 10 L 26 26 L 10 26 Z"/>
+      <path d="M14 14 L 22 14 L 22 22 L 14 22 Z" fill="#D4AF87" opacity=".5"/>
+    </g>
+  </svg>
+  <svg class="absolute top-8 right-8 w-20 opacity-50" viewBox="0 0 80 80" style="transform:scaleX(-1)" aria-hidden="true">
+    <g stroke="#D4AF87" fill="none" stroke-width="1">
+      <path d="M0 0 L40 0 L40 1 L0 1 Z" fill="#D4AF87"/>
+      <path d="M0 0 L0 40 L1 40 L1 0 Z" fill="#D4AF87"/>
+      <path d="M10 10 L 26 10 L 26 26 L 10 26 Z"/>
+      <path d="M14 14 L 22 14 L 22 22 L 14 22 Z" fill="#D4AF87" opacity=".5"/>
+    </g>
+  </svg>
+
+  <div class="max-w-[1200px] mx-auto px-6 md:px-10 relative">
+    <div class="reveal deco-line mb-6">
+      <span class="rule"></span><span class="diamond hollow"></span><span class="diamond"></span><span class="diamond hollow"></span><span class="rule"></span>
+    </div>
+    <p class="reveal text-xs tracking-[.4em] uppercase txt-gold text-center mb-5">Kapitel · Drei · Einkommen</p>
+    <h2 class="reveal font-display italic txt-cream text-center leading-[1.05] text-[2.4rem] md:text-[4rem] max-w-4xl mx-auto">
+      Und wenn du magst — <span class="txt-gold">lebe davon</span>.
+    </h2>
+
+    <p class="reveal font-quote italic text-center max-w-2xl mx-auto mt-8 text-[1.2rem] md:text-[1.4rem] leading-[1.5]" style="color:rgba(253,251,247,.8)">
+      Keine Quoten. Keine Startgebühr. Kein Skript, das du auswendig lernst. Nur ein sauberes System, das <em>mivita.care</em> für dich abwickelt — du teilst, was du ohnehin schon empfiehlst.
+    </p>
+
+    <div class="reveal rule-gold w-40 mx-auto my-14"></div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="reveal card-green grain p-8 relative">
+        <div class="font-display italic txt-gold text-6xl mb-2">15<span class="text-[.45em] align-top">%</span></div>
+        <p class="text-xs tracking-[.3em] uppercase txt-gold opacity-80 mb-4">Provision</p>
+        <p class="text-[.98rem] leading-[1.7]" style="color:rgba(253,251,247,.78)">Auf jede Bestellung deiner Empfehlungen. Transparent. Monatlich ausgezahlt. Kein Kleingedrucktes.</p>
+      </div>
+      <div class="reveal card-green grain p-8 relative md:mt-10">
+        <div class="font-display italic txt-gold text-6xl mb-2">0<span class="text-[.45em] align-top">€</span></div>
+        <p class="text-xs tracking-[.3em] uppercase txt-gold opacity-80 mb-4">Einstieg</p>
+        <p class="text-[.98rem] leading-[1.7]" style="color:rgba(253,251,247,.78)">Keine Startgebühr. Kein verpflichtender Warenkauf. Du entscheidest, wann und ob du aktiv bist.</p>
+      </div>
+      <div class="reveal card-green grain p-8 relative">
+        <div class="font-display italic txt-gold text-6xl mb-2">∞</div>
+        <p class="text-xs tracking-[.3em] uppercase txt-gold opacity-80 mb-4">Dein Tempo</p>
+        <p class="text-[.98rem] leading-[1.7]" style="color:rgba(253,251,247,.78)">Nebenbei. Hauptberuflich. Oder nur für die Freund:innen, die dich sowieso schon fragen, was du benutzt.</p>
+      </div>
+    </div>
+
+    <div class="reveal mt-14 text-center flex flex-col sm:flex-row gap-5 justify-center items-center">
+      <a class="btn-deco btn-gold" href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener">
+        Als Partner:in einsteigen <span class="arrow">→</span>
+      </a>
+      <a class="btn-deco btn-ghost" href="#faq">
+        Erst alle Fragen klären
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- FAQ                                                 -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="relative py-28 md:py-36" id="faq" style="background:var(--cream);">
+  <div class="grain grain-light absolute inset-0 pointer-events-none"></div>
+  <div class="max-w-[920px] mx-auto px-6 md:px-10 relative">
+
+    <p class="reveal text-xs tracking-[.4em] uppercase txt-cognac text-center mb-5">Noch offene Fragen?</p>
+    <h2 class="reveal font-display text-center leading-[1.05] text-[2.2rem] md:text-[3.4rem] mb-4" style="color:var(--charcoal)">
+      Frag alles.<br/><span class="italic txt-cognac">Ehrlich.</span>
+    </h2>
+    <div class="reveal rule-green w-32 mx-auto my-12"></div>
+
+    <div class="reveal">
+      <details class="faq-item" open>
+        <summary>
+          <h3 class="font-display italic text-xl md:text-[1.6rem] pr-4" style="color:var(--charcoal)">Ist das <em>wirklich</em> Bio?</h3>
+          <span class="diamond-bullet"></span>
+        </summary>
+        <div class="pb-7 pr-8 text-[1.05rem] leading-[1.75] text-neutral-700 font-quote italic text-[1.15rem]">
+          Ja. COSMOS Organic zertifiziert, über 95 % natürliche Inhaltsstoffe. Die Aloe wird auf Mallorca handgeerntet — kontrolliert biologisch, ohne synthetische Pestizide. Du kannst jedes Zertifikat auf mivita.care einsehen. Keine Marketing-Biologie.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <h3 class="font-display italic text-xl md:text-[1.6rem] pr-4" style="color:var(--charcoal)">Was genau ist <em>mivita.care</em>?</h3>
+          <span class="diamond-bullet"></span>
+        </summary>
+        <div class="pb-7 pr-8 text-[1.05rem] leading-[1.75] text-neutral-700 font-quote italic text-[1.15rem]">
+          Die Plattform, die den Shop, die Logistik und die Provisionen sauber abwickelt — damit Danavara sich auf das Produkt und die Mudita-Community konzentrieren kann. Du bestellst dort, du verwaltest dort dein Partner:innen-Konto dort. Nichts Komplizierteres als ein normaler Webshop.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <h3 class="font-display italic text-xl md:text-[1.6rem] pr-4" style="color:var(--charcoal)">Muss ich etwas <em>verkaufen</em>?</h3>
+          <span class="diamond-bullet"></span>
+        </summary>
+        <div class="pb-7 pr-8 text-[1.05rem] leading-[1.75] text-neutral-700 font-quote italic text-[1.15rem]">
+          Nein. Du teilst einen Link mit Menschen, die sowieso schon fragen, was du benutzt. Wenn jemand bestellt, bekommst du 15 % Provision. Kein Pitch, kein Skript, keine Quote. Und wenn du nie teilen willst — auch gut. Du bleibst trotzdem Teil des Kreises.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <h3 class="font-display italic text-xl md:text-[1.6rem] pr-4" style="color:var(--charcoal)">Was <em>kostet</em> mich das als Partner:in?</h3>
+          <span class="diamond-bullet"></span>
+        </summary>
+        <div class="pb-7 pr-8 text-[1.05rem] leading-[1.75] text-neutral-700 font-quote italic text-[1.15rem]">
+          0 €. Keine Startgebühr, kein Abo, kein Pflichtkauf. Du kannst dich heute registrieren und drei Monate lang nichts tun — es entsteht dir nichts. Wir halten das bewusst so, weil echte Empfehlung nicht unter Druck funktioniert.
+        </div>
+      </details>
+
+      <details class="faq-item">
+        <summary>
+          <h3 class="font-display italic text-xl md:text-[1.6rem] pr-4" style="color:var(--charcoal)">Für <em>wen</em> sind diese Produkte?</h3>
+          <span class="diamond-bullet"></span>
+        </summary>
+        <div class="pb-7 pr-8 text-[1.05rem] leading-[1.75] text-neutral-700 font-quote italic text-[1.15rem]">
+          Für Menschen über 30, die verstanden haben, dass wenige gute Dinge mehr sind als viele mittelmäßige. Alle Hauttypen — empfindliche Haut besonders. Männer, Frauen, alle dazwischen. Wenn du Ruhe und Substanz über Hype stellst, bist du hier richtig.
+        </div>
+      </details>
+    </div>
+
+    <div class="reveal mt-14 text-center">
+      <p class="font-quote italic text-xl" style="color:var(--charcoal)">Noch etwas im Kopf?</p>
+      <a class="btn-deco btn-ghost on-cream mt-5" href="/cdn-cgi/l/email-protection#95fdf4f9f9fad5f4f9faf0b8f9e0fff4fdbbf8fce3fce1f4bbf6f4e7f0">
+        Schreib uns direkt <span class="arrow">→</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- FINAL CTA                                           -->
+<!-- ═══════════════════════════════════════════════════ -->
+<section class="hero-bg grain relative py-36 md:py-52 overflow-hidden">
+  <!-- dramatic background accents -->
+  <div class="absolute inset-0 pointer-events-none" aria-hidden="true">
+    <div class="absolute top-1/2 left-1/2 w-[140vmin] h-[140vmin] -translate-x-1/2 -translate-y-1/2 rounded-full" style="background:radial-gradient(circle at 50% 50%, rgba(212,175,135,.12), transparent 55%);"></div>
+  </div>
+
+  <!-- giant monogram -->
+  <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+    <div class="font-display italic" style="color:rgba(212,175,135,.05);font-size:clamp(18rem, 40vw, 44rem);line-height:1;">A</div>
+  </div>
+
+  <div class="relative max-w-[1100px] mx-auto px-6 md:px-10 text-center">
+    <div class="reveal deco-line mb-8">
+      <span class="rule"></span><span class="diamond hollow"></span><span class="diamond"></span><span class="diamond hollow"></span><span class="rule"></span>
+    </div>
+
+    <p class="reveal font-script txt-gold text-4xl mb-4">eines noch —</p>
+
+    <h2 class="reveal font-display italic txt-cream leading-[1] text-[3rem] md:text-[6rem]">
+      Dein Ritual <br class="md:hidden"/>
+      <span class="txt-gold">wartet</span>.
+    </h2>
+    <h3 class="reveal font-display text-[1.8rem] md:text-[2.8rem] italic mt-4" style="color:rgba(253,251,247,.85)">
+      Nicht morgen.
+    </h3>
+
+    <div class="reveal rule-gold w-40 mx-auto my-12"></div>
+
+    <p class="reveal font-quote italic text-[1.25rem] md:text-[1.55rem] max-w-2xl mx-auto leading-[1.5]" style="color:rgba(253,251,247,.82)">
+      Du hast diese Seite bis hierher gelesen. Das ist kein Zufall — das ist ein leises <em>Ja</em>, das noch auf seine Handlung wartet. Gib ihm zwei Minuten.
+    </p>
+
+    <div class="reveal mt-12 flex flex-col sm:flex-row gap-5 justify-center items-center">
+      <a class="btn-deco btn-gold text-base" href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener">
+        Mein Ritual entdecken <span class="arrow">→</span>
+      </a>
+      <a class="btn-deco btn-ghost text-base" href="#partner">
+        Oder — Partner:in werden
+      </a>
+    </div>
+
+    <p class="reveal mt-10 text-xs tracking-[.3em] uppercase" style="color:rgba(253,251,247,.55)">
+      30 Tage Garantie · Versand aus EU · COSMOS Organic
+    </p>
+  </div>
+</section>
+
+</main>
+
+<!-- ═══════════════════════════════════════════════════ -->
+<!-- FOOTER                                              -->
+<!-- ═══════════════════════════════════════════════════ -->
+<footer class="relative py-14" style="background:var(--green-deep);">
+  <div class="max-w-[1400px] mx-auto px-6 md:px-10">
+    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+      <div class="flex items-center gap-3">
+        <svg viewBox="0 0 48 48" class="w-9 h-9" aria-hidden="true">
+          <path d="M24 6 C 18 14, 14 26, 12 40 L 18 40 C 19 30, 21 22, 24 16 Z" fill="#D4AF87"/>
+          <path d="M24 6 C 30 14, 34 26, 36 40 L 30 40 C 29 30, 27 22, 24 16 Z" fill="#D4AF87" opacity=".82"/>
+        </svg>
+        <div class="leading-tight">
+          <div class="font-display italic txt-gold text-lg">Aloelujah</div>
+          <div class="font-script text-sm -mt-1" style="color:rgba(253,251,247,.6)">by Danavara</div>
+        </div>
+      </div>
+
+      <div class="text-center">
+        <p class="font-quote italic text-lg" style="color:rgba(253,251,247,.75)">„WIR, MIT DIR… leben VITALITÄT!"</p>
+      </div>
+
+      <div class="flex items-center gap-5 text-xs tracking-[.25em] uppercase" style="color:rgba(253,251,247,.6);font-family:'Lora',serif;">
+        <a href="https://aloe-lujah.mivita.care" target="_blank" rel="noopener" class="hover:text-white">mivita.care</a>
+        <a href="#" class="hover:text-white">Impressum</a>
+        <a href="#" class="hover:text-white">Datenschutz</a>
+      </div>
+    </div>
+
+    <div class="rule-gold opacity-40 my-8"></div>
+
+    <div class="flex flex-col md:flex-row items-center justify-between gap-4 text-xs" style="color:rgba(253,251,247,.45)">
+      <p>© 2026 Danavara · The Mudita Circle</p>
+      <div class="flex items-center gap-4">
+        <a href="#" aria-label="Instagram" class="hover:text-white">Instagram</a>
+        <span class="diamond" style="display:inline-block;width:3px;height:3px;background:#D4AF87;transform:rotate(45deg);"></span>
+        <a href="#" aria-label="Pinterest" class="hover:text-white">Pinterest</a>
+        <span class="diamond" style="display:inline-block;width:3px;height:3px;background:#D4AF87;transform:rotate(45deg);"></span>
+        <a href="#" aria-label="TikTok" class="hover:text-white">TikTok</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+  // ── Nav scroll state ─────────────────────────
+  const nav = document.getElementById('nav');
+  const onScroll = () => {
+    if(window.scrollY > 40) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  };
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  // ── Mobile menu ──────────────────────────────
+  const burger = document.getElementById('burger');
+  const burgerClose = document.getElementById('burgerClose');
+  const mobileMenu = document.getElementById('mobileMenu');
+  burger.addEventListener('click', () => mobileMenu.classList.add('open'));
+  burgerClose.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  mobileMenu.querySelectorAll('[data-close], a').forEach(a => {
+    a.addEventListener('click', () => mobileMenu.classList.remove('open'));
+  });
+
+  // ── Staggered reveal via IntersectionObserver ─
+  const reveals = document.querySelectorAll('.reveal');
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach((e, i) => {
+      if(e.isIntersecting){
+        const delay = Array.from(e.target.parentElement?.querySelectorAll(':scope > .reveal') || []).indexOf(e.target);
+        setTimeout(() => e.target.classList.add('in'), Math.max(0, delay) * 90);
+        io.unobserve(e.target);
+      }
+    });
+  }, {threshold:.12, rootMargin:'0px 0px -40px 0px'});
+  reveals.forEach(r => io.observe(r));
+
+  // initial hero reveal (immediate, staggered)
+  document.querySelectorAll('section.hero-bg:first-of-type .reveal').forEach((el, i) => {
+    setTimeout(() => el.classList.add('in'), 120 + i * 110);
+  });
+
+  // ── Parallax on aloe decorations (light) ────
+  const parallaxEls = document.querySelectorAll('section.hero-bg svg[aria-hidden="true"]');
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    parallaxEls.forEach((el, i) => {
+      el.style.transform = (el.style.transform.includes('scaleX') ? 'scaleX(-1) ' : '') + `translateY(${y * (i%2===0 ? -0.03 : 0.04)}px)`;
+    });
+  }, {passive:true});
+
+  // ── Single-open FAQ behaviour ───────────────
+  document.querySelectorAll('details.faq-item').forEach(d => {
+    d.addEventListener('toggle', () => {
+      if(d.open){
+        document.querySelectorAll('details.faq-item').forEach(o => { if(o!==d) o.open = false; });
+      }
+    });
+  });
+
+  // ── GSAP scroll enhancements ────────────────
+  if(window.gsap && window.ScrollTrigger){
+    gsap.registerPlugin(ScrollTrigger);
+    gsap.utils.toArray('.big-num').forEach(el => {
+      gsap.from(el, {
+        scale:.85, opacity:0, duration:1.4, ease:'power3.out',
+        scrollTrigger:{trigger:el, start:'top 85%'}
       });
-    }
-  </script>
+    });
+  }
+</script>
 
 </body>
 </html>
