@@ -1,4 +1,4 @@
-const CACHE_NAME = 'aloelujah-v5';
+const CACHE_NAME = 'aloelujah-v7';
 const OFFLINE_URL = '/offline.html';
 const CACHE_URLS = [
   '/',
